@@ -5,6 +5,7 @@ import com.sxau.pblog.service.IService.TitleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
@@ -19,8 +20,16 @@ public class TitleController {
     @Autowired
     private TitleService userService;
 
-    @RequestMapping("/findUser")
-    public ModelAndView findTitle() throws Exception {
+    @ResponseBody
+    @RequestMapping(value = "/findUser")
+    public List<Title> testJson() {
+        List<Title> titles = userService.findAllTitle();
+        return titles;
+    }
+
+  /*  @RequestMapping("/findUser")
+    public ModelAndView findTitle() throws E
+    xception {
         ModelAndView modelAndView = new ModelAndView();
         //调用service方法得到用户列表
         List<Title> titles = userService.findAllTitle();
@@ -28,7 +37,6 @@ public class TitleController {
         modelAndView.addObject("titles", titles);
         //设置响应的jsp视图
         modelAndView.setViewName("findTitle");
-        System.out.print("fasfds"+titles.get(0).getId());
         return modelAndView;
-    }
+    }*/
 }
