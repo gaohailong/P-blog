@@ -1,1 +1,1 @@
-# P=blog
+# P-blog
