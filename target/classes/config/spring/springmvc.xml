@@ -19,7 +19,9 @@
     <!--swagger配置需要添加-->
     <context:annotation-config/>
     <mvc:default-servlet-handler/>
-    <mvc:resources mapping="/swagger/**" location="/WEB-INF/static/swagger/"/>
+    <mvc:resources mapping="/static/**" location="/WEB-INF/static/swagger"/>
+    <mvc:resources mapping="/ueditor/**" location="/Ueditor/" />
+    <!--<mvc:resources mapping="/upload/**" location="/upload/" />-->
     <!--控制器映射器和控制器适配器-->
     <mvc:annotation-driven></mvc:annotation-driven>
 </beans>
