@@ -21,6 +21,12 @@
 <script id="container" name="content" type="text/plain">这里写你的初始化内容</script>
 <script type="text/javascript">
     var editor = UE.getEditor('container')
+
+    //测试文件成功
+    /*function  test() {
+        alert( editor.getContent());
+    }*/
 </script>
+<button type="button" onclick="test()">test</button>
 </body>
 </html>
