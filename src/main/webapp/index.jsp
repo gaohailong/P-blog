@@ -23,9 +23,9 @@
     var editor = UE.getEditor('container')
 
     //测试文件成功
-    /*function  test() {
-        alert( editor.getContent());
-    }*/
+    function test() {
+        alert(editor.getContent());
+    }
 </script>
 <button type="button" onclick="test()">test</button>
 </body>

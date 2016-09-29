@@ -1,4 +1,4 @@
-package com.sxau.pblog.utils;
+package com.sxau.pblog.config;
 
 import com.mangofactory.swagger.configuration.SpringSwaggerConfig;
 import com.mangofactory.swagger.models.dto.ApiInfo;

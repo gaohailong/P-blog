@@ -13,7 +13,7 @@ import java.io.PrintWriter;
  * Created by gaohailong on 2016/9/28.
  */
 @Controller
-@RequestMapping("/ued")
+@RequestMapping("/ueditor/ued")
 public class UEditorController {
 
     @RequestMapping(value="/config")
