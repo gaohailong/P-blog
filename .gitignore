@@ -19,3 +19,18 @@ hs_err_pid*
 
 # Log Files
 *.log
+/.gitignore
+src/main/webapp/upload/
+src/test/
+target/P-blog/Ueditor/jsp/
+target/P-blog/WEB-INF/classes/com/sxau/pblog/config/
+target/P-blog/WEB-INF/ueditor/
+target/P-blog/css/
+target/P-blog/fonts/
+target/P-blog/images/
+target/P-blog/lang/
+target/P-blog/lib/
+target/P-blog/static/
+target/classes/com/sxau/pblog/config/
+target/generated-sources/
+target/test-classes/
