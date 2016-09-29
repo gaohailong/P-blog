@@ -14,10 +14,10 @@
     <facet type="Spring" name="Spring">
       <configuration>
         <fileset id="fileset" name="Spring Application Context" removed="false">
-          <file>file://$MODULE_DIR$/src/main/resources/config/spring/applicationContext-service.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/config/spring/applicationContext-transaction.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/config/spring/springmvc.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/config/spring/applicationContext-dao.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/config/spring/applicationContext-service.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/config/spring/springmvc.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/config/spring/applicationContext-transaction.xml</file>
         </fileset>
       </configuration>
     </facet>

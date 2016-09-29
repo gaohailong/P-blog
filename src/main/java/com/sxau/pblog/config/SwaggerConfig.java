@@ -7,15 +7,18 @@ import com.mangofactory.swagger.plugin.SwaggerSpringMvcPlugin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 /**
  * Created by gaohailong on 2016/9/26.
  */
+@Configuration
 @EnableWebMvc
 @EnableSwagger //Loads the spring beans required by the framework
-@ComponentScan("com.sxau.pblog")
+@ComponentScan("com.sxau.pblog.controller")
 public class SwaggerConfig {
+
     private SpringSwaggerConfig springSwaggerConfig;
 
     /**
@@ -35,8 +38,9 @@ public class SwaggerConfig {
     @Bean
     public SwaggerSpringMvcPlugin customImplementation()
     {
-        return new SwaggerSpringMvcPlugin(this.springSwaggerConfig).apiInfo(apiInfo()).includePatterns(
-                ".*?");
+        return new SwaggerSpringMvcPlugin(this.springSwaggerConfig)
+                .apiInfo(apiInfo())
+                .includePatterns(".*?");
     }
 
     private ApiInfo apiInfo()

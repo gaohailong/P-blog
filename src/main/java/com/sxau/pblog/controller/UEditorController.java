@@ -11,6 +11,7 @@ import java.io.PrintWriter;
 
 /**
  * Created by gaohailong on 2016/9/28.
+ * 上传图片的操作，无需操作
  */
 @Controller
 @RequestMapping("/ueditor/ued")
