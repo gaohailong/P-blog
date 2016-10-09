@@ -7,25 +7,9 @@ td {
     overflow: hidden;
 }
 
-iframe {
+iframe{
     border-width: 0px;
     border-style: none;
     border-color: snow;
     border-image: none;
-}
-
-#d_title {
-    display: none;
-}
-
-#i_title {
-    display: none;
-}
-
-#d_category {
-    display: none;
-}
-
-#i_category {
-    display: none;
 }

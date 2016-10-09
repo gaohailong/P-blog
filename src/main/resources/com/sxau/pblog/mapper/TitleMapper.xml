@@ -94,6 +94,19 @@
       order by ${orderByClause}
     </if>
   </select>
+
+  <!--分页-->
+  <select id="selectTitleByTitleName" parameterType="java.lang.String" resultMap="BaseResultMap">
+    SELECT *
+    FROM title
+    WHERE 1 = 1
+    <if test="titleName != null and titleName !=''">
+      AND articleName = #{titleName,jdbcType=VARCHAR}
+    </if>
+    ORDER BY ID
+  </select>
+  <!--分页-->
+
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.sxau.pblog.pojo.TitleExample" >
     select
     <if test="distinct" >

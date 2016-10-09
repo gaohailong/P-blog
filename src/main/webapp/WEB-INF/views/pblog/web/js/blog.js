@@ -16,12 +16,9 @@ function setIframeHeight(iframe) {
     }
 }
 
-/*
-/!*点击切换右边*!/
+/*点击切换右边*/
 //TODO 待加上网络后进行具体操作
 function setIframeHtml(iframeHtml) {
     var iframeId = document.getElementById("right_iframe");
-    iframeId.src = "views/"+iframeHtml + ".jsp";
+    iframeId.src = "/pblog/web/"+iframeHtml + ".jsp";
 }
-*/
-

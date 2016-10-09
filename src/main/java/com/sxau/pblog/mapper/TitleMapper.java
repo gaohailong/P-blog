@@ -18,6 +18,9 @@ public interface TitleMapper {
 
     List<Title> selectByExampleWithBLOBs(TitleExample example);
 
+    //分页
+    List<Title> selectTitleByTitleName(@Param("titleName") String userName);
+
     List<Title> selectByExample(TitleExample example);
 
     Title selectByPrimaryKey(Integer id);
