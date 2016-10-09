@@ -28,7 +28,15 @@
     <script language="JavaScript" src="<%=request.getContextPath()%>/pblog/web/js/blog.js"></script>
 
     <!--网络请求-->
-    <script src="<%=request.getContextPath()%>/pblog/web/js/request.js" language="javascript"></script>
+    <script src="<%=request.getContextPath()%>/pblog/web/js/title.js" language="javascript"></script>
+
+    <!--ueditor编辑器-->
+    <!-- 配置文件 -->
+    <script language="javascript" src="<%=request.getContextPath()%>/Ueditor/ueditor.config.js"></script>
+    <!-- 编辑器源码文件 -->
+    <script language="javascript" src="<%=request.getContextPath()%>/Ueditor/ueditor.all.js"></script>
+    <!-- 语言包文件(建议手动加载语言包，避免在ie下，因为加载语言失败导致编辑器加载失败) -->
+    <script language="javascript" src="<%=request.getContextPath()%>/Ueditor/lang/zh-cn/zh-cn.js"></script>
 </head>
 <body>
 <div class="container-fluid">
@@ -118,35 +126,28 @@
         <div class="col-lg-8 "
              style="background-color: #ffffff;border-radius: 10px; border: #d4d4d4 1px solid;margin: 20px;">
             <!--start 所有文章-->
-            <div id="d_title"  class="col-lg-12">
+            <div id="d_title" class="col-lg-12">
                 <h3> 文章列表</h3>
                 <div class="row" style="padding: 10px 15px 15px;">
                     <table class="table table-striped">
                         <thead>
-                            <tr>
-                                <th>序号</th>
-                                <th>名称</th>
-                                <th>阅读量</th>
-                                <th>发表日期</th>
-                                <th>状态</th>
-                                <th>所属分类</th>
-                                <th>置顶</th>
-                                <th>操作</th>
-                            </tr>
+                        <tr>
+                            <th>序号</th>
+                            <th>名称</th>
+                            <th>阅读量</th>
+                            <th>发表日期</th>
+                            <th>状态</th>
+                            <th>所属分类</th>
+                            <th>置顶</th>
+                            <th>操作</th>
+                        </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="d_body">
                         </tbody>
                     </table>
                 </div>
                 <nav class="text-center " id="all-title">
                     <ul class="pagination pagination-lg" id="t-page">
-                       <%-- <li><a href="#">&laquo;</a></li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">&raquo;</a></li>--%>
                     </ul>
                 </nav>
             </div>
@@ -161,16 +162,25 @@
                             <input type="email" class="form-control" id="inputEmail3" placeholder="标题">
                         </div>
                     </div>
+                    <div class="col-sm-1"></div>
+                    <div class="form-group col-sm-11">
+                        <script id="container" name="content" type="text/plain">这里写你的初始化内容</script>
+                        <script type="text/javascript">
+                            var editor = UE.getEditor('container')
+
+                            //测试文件成功
+                            function test() {
+                                alert(editor.getContent());
+                            }
+                        </script>
+                    </div>
                     <div class="form-group">
                         <div class="col-sm-1"></div>
                         <label class="col-sm-1 control-label">分类</label>
                         <div class="col-sm-2">
-                            <select class="form-control">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
+                            <select class="form-control" id="s_category">
+                               <%-- <option>1</option>
+                                <option>2</option>--%>
                             </select>
                         </div>
                         <label class="col-sm-1 control-label">显示</label>
@@ -203,11 +213,11 @@
             </div>
             <!--end 填写文章-->
             <!--start 所有分类-->
-            <div id="d_category" class="col-lg-12" >
+            <div id="d_category" class="col-lg-12">
                 <h3> 分类列表</h3>
                 <div class="row" style="padding: 10px 15px 15px;">
                     <table class="table table-striped ">
-                        <thead >
+                        <thead>
                         <tr>
                             <th>序号</th>
                             <th>分类</th>
@@ -219,8 +229,9 @@
                             <td>1</td>
                             <td>Markfds</td>
                             <td>
-                                <a href="#"><img src="images/update.png" style="width: 20px;height: 20px;"></a>
-                                <a href="#"><img src="images/delete.png"
+                                <a href="#"><img src="<%=request.getContextPath()%>/pblog/web/images/update.png"
+                                                 style="width: 20px;height: 20px;"></a>
+                                <a href="#"><img src="<%=request.getContextPath()%>/pblog/web/images/delete.png"
                                                  style="width: 20px;height: 20px;margin-left: 5px;"></a>
                             </td>
                         </tr>

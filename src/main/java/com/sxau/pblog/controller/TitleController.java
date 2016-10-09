@@ -24,12 +24,12 @@ import java.util.List;
 public class TitleController {
     //service类
     @Autowired
-    private TitleService userService;
+    private TitleService titleService;
 
     @RequestMapping(value = "/findTitle", method = RequestMethod.GET)
     @ResponseBody
     public PagedResult<Title> queryByPage(@ApiParam(required = true, name = "page", value = "页数") int page, @ApiParam(required = true, name = "pageNumber", value = "条数") int pageNumber) {
-        PagedResult<Title> pagedResult = userService.queryByPage(null, page, pageNumber);//null表示查全部
+        PagedResult<Title> pagedResult = titleService.queryByPage(null, page, pageNumber);//null表示查全部
         return pagedResult;
     }
 
@@ -40,7 +40,7 @@ public class TitleController {
     @RequestMapping(value = "/findUser", method = RequestMethod.GET)
     @ResponseBody
     public List<Title> testJson() {
-        List<Title> titles = userService.findAllTitle();
+        List<Title> titles = titleService.findAllTitle();
         return titles;
     }
 /*
@@ -52,7 +52,7 @@ public class TitleController {
     @ResponseBody
     public PagedResult<Title> queryByPage(@ApiParam(required = true, name = "page", value = "页数") @PathVariable int page,
                                           @ApiParam(required = true, name = "pageNumber", value = "条数") @PathVariable int pageNumber) {
-        PagedResult<Title> pagedResult = userService.queryByPage(null, page, pageNumber);//null表示查全部
+        PagedResult<Title> pagedResult = titleService.queryByPage(null, page, pageNumber);//null表示查全部
         return pagedResult;
     }*/
 

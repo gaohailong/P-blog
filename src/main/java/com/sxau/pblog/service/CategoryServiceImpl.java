@@ -18,6 +18,7 @@ public class CategoryServiceImpl implements CategoryService {
     private CategoryMapper categoryMapper;
 
     public List<Category> getAllCategory() {
-        return categoryMapper.selectByExample(null);
+        List<Category> category = categoryMapper.selectByExample(null);
+        return category;
     }
 }

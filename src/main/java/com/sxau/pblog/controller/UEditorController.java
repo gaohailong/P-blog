@@ -14,7 +14,7 @@ import java.io.PrintWriter;
  * 上传图片的操作，无需操作
  */
 @Controller
-@RequestMapping("/ueditor/ued")
+@RequestMapping("/Ueditor/ued")
 public class UEditorController {
 
     @RequestMapping(value="/config")
