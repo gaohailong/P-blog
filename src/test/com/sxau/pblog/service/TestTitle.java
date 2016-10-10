@@ -10,13 +10,13 @@ import javax.annotation.Resource;
 /**
  * Created by gaohailong on 2016/9/30.
  */
-public class TestPage extends SpringTestCase {
+public class TestTitle extends SpringTestCase {
     @Resource
-    private TitleServiceImpl userService;
+    private TitleServiceImpl tittleService;
 
     @Test
     public void queryPage() {
-        PagedResult<Title> pagedResult = userService.queryByPage(null, 1, 2);//null表示查全部
-
+        PagedResult<Title> pagedResult = tittleService.queryByPage(null, 1, 2);//null表示查全部
+        System.out.print(pagedResult);
     }
 }

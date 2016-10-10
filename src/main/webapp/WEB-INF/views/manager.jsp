@@ -29,6 +29,7 @@
 
     <!--网络请求-->
     <script src="<%=request.getContextPath()%>/pblog/web/js/title.js" language="javascript"></script>
+    <script src="<%=request.getContextPath()%>/pblog/web/js/category.js" language="javascript"></script>
 
     <!--ueditor编辑器-->
     <!-- 配置文件 -->
@@ -221,28 +222,11 @@
                             <th>操作</th>
                         </tr>
                         </thead>
-                        <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Markfds</td>
-                            <td>
-                                <a href="#"><img src="<%=request.getContextPath()%>/pblog/web/images/update.png"
-                                                 style="width: 20px;height: 20px;"></a>
-                                <a href="#"><img src="<%=request.getContextPath()%>/pblog/web/images/delete.png"
-                                                 style="width: 20px;height: 20px;margin-left: 5px;"></a>
-                            </td>
-                        </tr>
+                        <tbody id="c_body">
                         </tbody>
                     </table>
                     <nav class="text-center">
-                        <ul class="pagination pagination-lg ">
-                            <li><a href="#">&laquo;</a></li>
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li><a href="#">&raquo;</a></li>
+                        <ul class="pagination pagination-lg" id="c-page">
                         </ul>
                     </nav>
                 </div>

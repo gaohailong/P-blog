@@ -33,7 +33,7 @@ public class TitleController {
 
     @ResponseBody
     @RequestMapping(value = "/addTitle", method = RequestMethod.POST)
-    public void addTitle(@RequestParam(value = "titleName", required = false) String titleName, @RequestParam(value = "titleContent") String titleContent, @RequestParam(value = "titleCate") String titleCate, @RequestParam(value = "titleDisplay") String titleDisplay) {
+    public void addTitle(@RequestParam(value = "titleName") String titleName, @RequestParam(value = "titleContent") String titleContent, @RequestParam(value = "titleCate") String titleCate, @RequestParam(value = "titleDisplay") String titleDisplay) {
         titleService.addTitle(titleName, titleContent, titleCate, titleDisplay);
     }
     /**

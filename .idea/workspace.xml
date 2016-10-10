@@ -2,66 +2,54 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83e790b4-1c66-499c-b30d-fbec6cc7c796" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sxau/pblog/utils/DateUtil.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_2_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_2_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_2_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/TfindTitle.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addTitle.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/allTitle.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pblog/web/addCategory.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pblog/web/addTitle.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pblog/web/allCategory.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pblog/web/allTitle.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pblog/web/css/index.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pblog/web/images/delete.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pblog/web/images/update.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pblog/web/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pblog/web/js/blog.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pblog/web/js/jquery-1.11.3.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/pblog/web/addCategory.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/pblog/web/addTitle.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/pblog/web/allCategory.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/pblog/web/allTitle.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/pblog/web/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/pblog/web/indexTwo.jsp" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pblog/web/js/category.js" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/sxau/pblog/utils/SwaggerConfig.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/P-blog.war" afterPath="$PROJECT_DIR$/target/P-blog.war" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/P-blog/WEB-INF/classes/com/baidu/ueditor/PathFormat.class" afterPath="$PROJECT_DIR$/target/P-blog/WEB-INF/classes/com/baidu/ueditor/PathFormat.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/P-blog/WEB-INF/classes/com/sxau/pblog/controller/CategoryController.class" afterPath="$PROJECT_DIR$/target/P-blog/WEB-INF/classes/com/sxau/pblog/controller/CategoryController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/P-blog/WEB-INF/classes/com/sxau/pblog/controller/TitleController.class" afterPath="$PROJECT_DIR$/target/P-blog/WEB-INF/classes/com/sxau/pblog/controller/TitleController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/P-blog/WEB-INF/classes/com/sxau/pblog/controller/UEditorController.class" afterPath="$PROJECT_DIR$/target/P-blog/WEB-INF/classes/com/sxau/pblog/controller/UEditorController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/P-blog/WEB-INF/classes/com/sxau/pblog/mapper/CategoryMapper.class" afterPath="$PROJECT_DIR$/target/P-blog/WEB-INF/classes/com/sxau/pblog/mapper/CategoryMapper.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/P-blog/WEB-INF/classes/com/sxau/pblog/mapper/TitleMapper.class" afterPath="$PROJECT_DIR$/target/P-blog/WEB-INF/classes/com/sxau/pblog/mapper/TitleMapper.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/P-blog/WEB-INF/classes/com/sxau/pblog/service/CategoryServiceImpl.class" afterPath="$PROJECT_DIR$/target/P-blog/WEB-INF/classes/com/sxau/pblog/service/CategoryServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/P-blog/WEB-INF/classes/com/sxau/pblog/service/IService/CategoryService.class" afterPath="$PROJECT_DIR$/target/P-blog/WEB-INF/classes/com/sxau/pblog/service/IService/CategoryService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/P-blog/WEB-INF/classes/com/sxau/pblog/service/IService/TitleService.class" afterPath="$PROJECT_DIR$/target/P-blog/WEB-INF/classes/com/sxau/pblog/service/IService/TitleService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/P-blog/WEB-INF/classes/com/sxau/pblog/service/TitleServiceImpl.class" afterPath="$PROJECT_DIR$/target/P-blog/WEB-INF/classes/com/sxau/pblog/service/TitleServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/baidu/ueditor/PathFormat.class" afterPath="$PROJECT_DIR$/target/classes/com/baidu/ueditor/PathFormat.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sxau/pblog/controller/CategoryController.class" afterPath="$PROJECT_DIR$/target/classes/com/sxau/pblog/controller/CategoryController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sxau/pblog/controller/TitleController.class" afterPath="$PROJECT_DIR$/target/classes/com/sxau/pblog/controller/TitleController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sxau/pblog/controller/UEditorController.class" afterPath="$PROJECT_DIR$/target/classes/com/sxau/pblog/controller/UEditorController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sxau/pblog/mapper/CategoryMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/sxau/pblog/mapper/CategoryMapper.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sxau/pblog/mapper/TitleMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/sxau/pblog/mapper/TitleMapper.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sxau/pblog/service/CategoryServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/sxau/pblog/service/CategoryServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sxau/pblog/service/IService/CategoryService.class" afterPath="$PROJECT_DIR$/target/classes/com/sxau/pblog/service/IService/CategoryService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sxau/pblog/service/IService/TitleService.class" afterPath="$PROJECT_DIR$/target/classes/com/sxau/pblog/service/IService/TitleService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sxau/pblog/service/TitleServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/sxau/pblog/service/TitleServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/P_blog_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/P_blog_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/P-blog.iml" afterPath="$PROJECT_DIR$/P-blog.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/baidu/ueditor/PathFormat.java" afterPath="$PROJECT_DIR$/src/main/java/com/baidu/ueditor/PathFormat.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sxau/pblog/controller/CategoryController.java" afterPath="$PROJECT_DIR$/src/main/java/com/sxau/pblog/controller/CategoryController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sxau/pblog/controller/TitleController.java" afterPath="$PROJECT_DIR$/src/main/java/com/sxau/pblog/controller/TitleController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sxau/pblog/service/IService/TitleService.java" afterPath="$PROJECT_DIR$/src/main/java/com/sxau/pblog/service/IService/TitleService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sxau/pblog/service/TitleServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/sxau/pblog/service/TitleServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sxau/pblog/mapper/CategoryMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/sxau/pblog/mapper/CategoryMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sxau/pblog/mapper/TitleMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/sxau/pblog/mapper/TitleMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sxau/pblog/service/CategoryServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/sxau/pblog/service/CategoryServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sxau/pblog/service/IService/CategoryService.java" afterPath="$PROJECT_DIR$/src/main/java/com/sxau/pblog/service/IService/CategoryService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/sxau/pblog/mapper/CategoryMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/sxau/pblog/mapper/CategoryMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manager.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manager.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pblog/web/js/blog.js" afterPath="$PROJECT_DIR$/src/main/webapp/pblog/web/js/blog.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pblog/web/js/title.js" afterPath="$PROJECT_DIR$/src/main/webapp/pblog/web/js/title.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/com/sxau/pblog/service/TestCategory.java" afterPath="$PROJECT_DIR$/src/test/com/sxau/pblog/service/TestCategory.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/P-blog/Ueditor/ueditor.config.js" afterPath="$PROJECT_DIR$/target/P-blog/Ueditor/ueditor.config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/P-blog/WEB-INF/classes/com/sxau/pblog/mapper/CategoryMapper.xml" afterPath="$PROJECT_DIR$/target/P-blog/WEB-INF/classes/com/sxau/pblog/mapper/CategoryMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/P-blog/WEB-INF/classes/com/sxau/pblog/mapper/TitleMapper.xml" afterPath="$PROJECT_DIR$/target/P-blog/WEB-INF/classes/com/sxau/pblog/mapper/TitleMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/P-blog/WEB-INF/classes/config/mybatis/SqlMapConfig.xml" afterPath="$PROJECT_DIR$/target/P-blog/WEB-INF/classes/config/mybatis/SqlMapConfig.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/P-blog/WEB-INF/classes/config/spring/applicationContext-service.xml" afterPath="$PROJECT_DIR$/target/P-blog/WEB-INF/classes/config/spring/applicationContext-service.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/P-blog/WEB-INF/classes/config/spring/springmvc.xml" afterPath="$PROJECT_DIR$/target/P-blog/WEB-INF/classes/config/spring/springmvc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/P-blog/index.jsp" afterPath="$PROJECT_DIR$/target/P-blog/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sxau/pblog/mapper/CategoryMapper.xml" afterPath="$PROJECT_DIR$/target/classes/com/sxau/pblog/mapper/CategoryMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/sxau/pblog/mapper/TitleMapper.xml" afterPath="$PROJECT_DIR$/target/classes/com/sxau/pblog/mapper/TitleMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/config/mybatis/SqlMapConfig.xml" afterPath="$PROJECT_DIR$/target/classes/config/mybatis/SqlMapConfig.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/config/spring/applicationContext-service.xml" afterPath="$PROJECT_DIR$/target/classes/config/spring/applicationContext-service.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/config/spring/springmvc.xml" afterPath="$PROJECT_DIR$/target/classes/config/spring/springmvc.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/com/sxau/pblog/service/TestPage.java" afterPath="$PROJECT_DIR$/src/test/com/sxau/pblog/service/TestTitle.java" />
     </list>
     <ignored path="P-blog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -87,31 +75,38 @@
       <file leaf-file-name="manager.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manager.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="257" column="38" selection-start-line="257" selection-start-column="38" selection-end-line="257" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="title.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/pblog/web/js/title.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state relative-caret-position="250">
+              <caret line="225" column="0" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
               <folding>
-                <marker date="1476066130074" expanded="true" signature="2867:2892" placeholder="..." />
-                <marker date="1476066130074" expanded="true" signature="2981:3023" placeholder="..." />
+                <element signature="n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TitleController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="title.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/pblog/web/js/title.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5">
+              <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+              <folding>
+                <element signature="n#!!doc;n#allTitle#0" expanded="false" />
+                <element signature="n#!!block;n#hideDiv#0" expanded="false" />
+                <element signature="n#!!block;n#getCategory#0" expanded="false" />
+                <element signature="n#!!block;n#getLocalTime#0" expanded="false" />
+                <element signature="n#!!block;n#ormatDate#0" expanded="false" />
+                <marker date="1476076477235" expanded="true" signature="2893:2918" placeholder="..." />
+                <marker date="1476076477235" expanded="true" signature="3007:3049" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TitleController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sxau/pblog/controller/TitleController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="34" column="68" selection-start-line="34" selection-start-column="68" selection-end-line="34" selection-end-column="68" />
+            <state relative-caret-position="91">
+              <caret line="27" column="65" selection-start-line="27" selection-start-column="65" selection-end-line="27" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -119,42 +114,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TitleServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sxau/pblog/service/TitleServiceImpl.java">
+      <file leaf-file-name="category.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/pblog/web/js/category.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="41" column="30" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
-              <folding />
+            <state relative-caret-position="198">
+              <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+              <folding>
+                <element signature="n#!!doc;n#getCategoryForCate#0" expanded="false" />
+                <marker date="1476078700902" expanded="true" signature="1238:1263" placeholder="..." />
+                <marker date="1476078700902" expanded="true" signature="1351:1393" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TitleMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sxau/pblog/mapper/TitleMapper.java">
+      <file leaf-file-name="CategoryController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sxau/pblog/controller/CategoryController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Title.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sxau/pblog/pojo/Title.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TitleService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sxau/pblog/service/IService/TitleService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-              <folding />
+            <state relative-caret-position="-239">
+              <caret line="30" column="47" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
+              <folding>
+                <element signature="e#1005#1006#0" expanded="true" />
+                <element signature="e#1060#1061#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -166,6 +148,7 @@
       <list>
         <option value="Jsp File" />
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -184,15 +167,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/sxau/pblog/config/SwaggerConfig.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/swagger/index.html" />
         <option value="$PROJECT_DIR$/src/main/resources/config/spring/springmvc.xml" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/resources/config/mybatis/SqlMapConfig.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/sxau/pblog/dto/BaseEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sxau/pblog/utils/PagedResult.java" />
         <option value="$PROJECT_DIR$/src/test/com/sxau/pblog/base/SpringTestCase.java" />
         <option value="$PROJECT_DIR$/src/test/com/sxau/pblog/TestPage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sxau/pblog/mapper/TitleMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/com/sxau/pblog/mapper/TitleMapper.xml" />
-        <option value="$PROJECT_DIR$/src/test/com/sxau/pblog/service/TestPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sxau/pblog/utils/BeanUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sxau/pblog/utils/HttpConstants.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sxau/pblog/controller/BaseController.java" />
@@ -206,17 +186,26 @@
         <option value="$PROJECT_DIR$/src/main/webapp/Ueditor/ueditor.config.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/sxau/pblog/controller/UEditorController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/indexTwo.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sxau/pblog/service/CategoryServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/test/com/sxau/pblog/service/TestCategory.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manager.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/sxau/pblog/service/IService/TitleService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sxau/pblog/utils/DateUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/baidu/ueditor/PathFormat.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/pblog/web/js/blog.js" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/sxau/pblog/service/TitleServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sxau/pblog/service/IService/CategoryService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sxau/pblog/mapper/TitleMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sxau/pblog/mapper/CategoryMapper.java" />
+        <option value="$PROJECT_DIR$/src/test/com/sxau/pblog/service/TestCategory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sxau/pblog/service/CategoryServiceImpl.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/sxau/pblog/mapper/CategoryMapper.xml" />
+        <option value="$PROJECT_DIR$/src/test/com/sxau/pblog/service/TestPage.java" />
+        <option value="$PROJECT_DIR$/src/test/com/sxau/pblog/service/TestTitle.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sxau/pblog/controller/TitleController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/pblog/web/js/title.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manager.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pblog/web/js/category.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sxau/pblog/controller/CategoryController.java" />
       </list>
     </option>
   </component>
@@ -302,6 +291,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pblog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="P-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="P-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pblog" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -408,6 +431,70 @@
               <option name="myItemId" value="pblog" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="P-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="P-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pblog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="P-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="P-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pblog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -428,6 +515,58 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="P-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="P-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="P-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="P-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mapper" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -743,7 +882,7 @@
       <recent name="H:\idea_workspace\P-blog\src\main\webapp\WEB-INF\views" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestCategory.getAllCategory">
+  <component name="RunManager" selected="JUnit.TestCategory.getAllCategoryFoeCategory">
     <configuration default="false" name="index.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 7.0.72" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/index.jsp" />
       <option name="UPDATING_POLICY" value="hot-swap-classes" />
@@ -817,71 +956,6 @@
         </option>
       </method>
     </configuration>
-    <configuration default="false" name="TestPage.queryPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.sxau.pblog.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="P-blog" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.sxau.pblog.service" />
-      <option name="MAIN_CLASS_NAME" value="com.sxau.pblog.service.TestPage" />
-      <option name="METHOD_NAME" value="queryPage" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="allTitle.html" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 7.0.72" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/WEB-INF/views/allTitle.html" />
-      <deployment>
-        <artifact name="P-blog:war exploded">
-          <settings>
-            <option name="CONTEXT_PATH" value="/" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="allTitle_html_P-blog" />
-      </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method>
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="P-blog:war exploded" />
-        </option>
-      </method>
-    </configuration>
     <configuration default="false" name="indexTwo.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 7.0.72" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/indexTwo.jsp" />
       <deployment>
@@ -934,6 +1008,58 @@
       <option name="PACKAGE_NAME" value="com.sxau.pblog.service" />
       <option name="MAIN_CLASS_NAME" value="com.sxau.pblog.service.TestCategory" />
       <option name="METHOD_NAME" value="getAllCategory" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="TestCategory.getAllCategoryFoeCategory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.sxau.pblog.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="P-blog" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.sxau.pblog.service" />
+      <option name="MAIN_CLASS_NAME" value="com.sxau.pblog.service.TestCategory" />
+      <option name="METHOD_NAME" value="getAllCategoryFoeCategory" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="TestTitle.queryPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.sxau.pblog.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="P-blog" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.sxau.pblog.service" />
+      <option name="MAIN_CLASS_NAME" value="com.sxau.pblog.service.TestTitle" />
+      <option name="METHOD_NAME" value="queryPage" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -1361,18 +1487,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.index.jsp" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.TestPage.queryPage" />
-      <item index="2" class="java.lang.String" itemvalue="Tomcat Server.allTitle.html" />
-      <item index="3" class="java.lang.String" itemvalue="Tomcat Server.indexTwo.jsp" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.TestCategory.getAllCategory" />
+      <item index="1" class="java.lang.String" itemvalue="Tomcat Server.indexTwo.jsp" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.TestCategory.getAllCategory" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.TestCategory.getAllCategoryFoeCategory" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.TestTitle.queryPage" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Tomcat Server.index.jsp" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.TestCategory.getAllCategory" />
-        <item index="2" class="java.lang.String" itemvalue="Tomcat Server.indexTwo.jsp" />
-        <item index="3" class="java.lang.String" itemvalue="Tomcat Server.allTitle.html" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.TestPage.queryPage" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TestCategory.getAllCategoryFoeCategory" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TestTitle.queryPage" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.TestCategory.getAllCategory" />
+        <item index="4" class="java.lang.String" itemvalue="Tomcat Server.indexTwo.jsp" />
       </list>
     </recent_temporary>
   </component>
@@ -1402,41 +1528,44 @@
       <workItem from="1475973528573" duration="23242000" />
       <workItem from="1476006794166" duration="11407000" />
       <workItem from="1476021043824" duration="1702000" />
-      <workItem from="1476058457085" duration="8150000" />
+      <workItem from="1476058457085" duration="18152000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestCategory_getAllCategory - 2016.10.09 at 19h 55m 33s.xml">
-      <configuration name="TestCategory.getAllCategory" configurationId="JUnit" />
+    <history-entry file="TestCategory_getAllCategoryFoeCategory - 2016.10.10 at 11h 29m 47s.xml">
+      <configuration name="TestCategory.getAllCategoryFoeCategory" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestCategory_getAllCategory - 2016.10.09 at 20h 21m 55s.xml">
-      <configuration name="TestCategory.getAllCategory" configurationId="JUnit" />
+    <history-entry file="TestCategory_getAllCategoryFoeCategory - 2016.10.10 at 11h 35m 06s.xml">
+      <configuration name="TestCategory.getAllCategoryFoeCategory" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestCategory_getAllCategory - 2016.10.09 at 20h 29m 09s.xml">
-      <configuration name="TestCategory.getAllCategory" configurationId="JUnit" />
+    <history-entry file="TestCategory_getAllCategoryFoeCategory - 2016.10.10 at 11h 40m 46s.xml">
+      <configuration name="TestCategory.getAllCategoryFoeCategory" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestCategory_getAllCategory - 2016.10.09 at 20h 31m 14s.xml">
-      <configuration name="TestCategory.getAllCategory" configurationId="JUnit" />
+    <history-entry file="TestCategory_getAllCategoryFoeCategory - 2016.10.10 at 11h 44m 51s.xml">
+      <configuration name="TestCategory.getAllCategoryFoeCategory" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestCategory_getAllCategory - 2016.10.09 at 20h 33m 57s.xml">
-      <configuration name="TestCategory.getAllCategory" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestPage_queryPage - 2016.09.30 at 10h 11m 36s.xml">
-      <configuration name="TestPage.queryPage" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestPage_queryPage - 2016.09.30 at 10h 15m 13s.xml">
-      <configuration name="TestPage.queryPage" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestPage_queryPage - 2016.09.30 at 10h 19m 04s.xml">
-      <configuration name="TestPage.queryPage" configurationId="JUnit" />
+    <history-entry file="TestCategory_getAllCategoryFoeCategory - 2016.10.10 at 11h 58m 23s.xml">
+      <configuration name="TestCategory.getAllCategoryFoeCategory" configurationId="JUnit" />
     </history-entry>
     <history-entry file="TestPage_queryPage - 2016.09.30 at 10h 45m 39s.xml">
       <configuration name="TestPage.queryPage" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TestPage_queryPage - 2016.10.10 at 11h 48m 50s.xml">
+      <configuration name="TestPage.queryPage" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestPage_queryPage - 2016.10.10 at 11h 49m 12s.xml">
+      <configuration name="TestPage.queryPage" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestPage_queryPage - 2016.10.10 at 11h 56m 57s.xml">
+      <configuration name="TestPage.queryPage" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestTitle_queryPage - 2016.10.10 at 11h 58m 13s.xml">
+      <configuration name="TestTitle.queryPage" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88426000" />
+    <option name="totallyTimeSpent" value="98428000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1449,7 +1578,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -1468,9 +1597,9 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32352942" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33660132" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3267974" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3267974" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22087745" sideWeight="0.4830097" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22087745" sideWeight="0.5169903" order="4" side_tool="true" content_ui="tabs" />
@@ -1503,27 +1632,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/Ueditor/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1957">
-          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/Ueditor/ueditor.parse.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2451">
-          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/Ueditor/ueditor.parse.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/conf/config.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -1560,13 +1668,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/pblog/web/addTitle.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1612,6 +1713,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="61">
           <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1676,28 +1778,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sxau/pblog/service/IService/CategoryService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sxau/pblog/mapper/CategoryMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/com/sxau/pblog/service/TestPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -1706,37 +1786,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/com/sxau/pblog/service/TestCategory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#339#340#0" expanded="true" />
-            <element signature="e#426#427#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sxau/pblog/pojo/Category.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
           <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sxau/pblog/service/CategoryServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sxau/pblog/controller/CategoryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -1823,14 +1877,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sxau/pblog/mapper/TitleMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sxau/pblog/pojo/Title.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -1847,14 +1893,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sxau/pblog/service/TitleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="41" column="30" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
@@ -1863,31 +1901,168 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sxau/pblog/controller/TitleController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sxau/pblog/mapper/TitleMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="34" column="68" selection-start-line="34" selection-start-column="68" selection-end-line="34" selection-end-column="68" />
+        <state relative-caret-position="143">
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sxau/pblog/service/IService/CategoryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/sxau/pblog/mapper/TitleMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="101" column="15" selection-start-line="101" selection-start-column="15" selection-end-line="101" selection-end-column="15" />
+          <folding>
+            <marker date="1475201938413" expanded="true" signature="4096:4268" placeholder="SELECT * FRO... title" />
+            <marker date="1475201938413" expanded="true" signature="4811:4959" placeholder="select , fro... " />
+            <marker date="1475201938413" expanded="true" signature="5046:5101" placeholder="delete from " />
+            <marker date="1475201938413" expanded="true" signature="5200:5217" placeholder="delete from " />
+            <marker date="1475201938413" expanded="true" signature="5393:5801" placeholder="insert into title... " />
+            <marker date="1475201938413" expanded="true" signature="7510:7536" placeholder="select count... title" />
+            <marker date="1475201938413" expanded="true" signature="8893:9368" placeholder="update title... " />
+            <marker date="1475201938413" expanded="true" signature="9541:9946" placeholder="update title... " />
+            <marker date="1475201938413" expanded="true" signature="10153:10989" placeholder="update title... " />
+            <marker date="1475201938413" expanded="true" signature="11093:11508" placeholder="update title... " />
+            <marker date="1475201938413" expanded="true" signature="11603:11955" placeholder="update title... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sxau/pblog/service/TitleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/com/sxau/pblog/service/TestTitle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="17" column="19" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/sxau/pblog/mapper/CategoryMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="89" column="14" selection-start-line="89" selection-start-column="14" selection-end-line="89" selection-end-column="14" />
+          <folding>
+            <marker date="1476071324728" expanded="true" signature="3313:3417" placeholder="select from category" />
+            <marker date="1476071324728" expanded="true" signature="3536:3717" placeholder="SELECT * FRO... category" />
+            <marker date="1476071324728" expanded="true" signature="3536:3719" placeholder="SELECT * FRO... category" />
+            <marker date="1476071324728" expanded="true" signature="3807:3865" placeholder="delete from " />
+            <marker date="1476071324728" expanded="true" signature="3967:3987" placeholder="delete from " />
+            <marker date="1476071324728" expanded="true" signature="4166:4264" placeholder="insert into category... " />
+            <marker date="1476071324728" expanded="true" signature="4927:4956" placeholder="select count... category" />
+            <marker date="1476071324728" expanded="true" signature="5539:5648" placeholder="update categ... " />
+            <marker date="1476071324728" expanded="true" signature="5858:6027" placeholder="update categ... " />
+            <marker date="1476071324728" expanded="true" signature="6125:6223" placeholder="update categ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sxau/pblog/mapper/CategoryMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="20" column="43" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sxau/pblog/service/CategoryServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="33" column="60" selection-start-line="33" selection-start-column="60" selection-end-line="33" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/com/sxau/pblog/service/TestCategory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#483#484#0" expanded="true" />
+            <element signature="e#556#557#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manager.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="257" column="38" selection-start-line="257" selection-start-column="38" selection-end-line="257" selection-end-column="38" />
-          <folding />
+        <state relative-caret-position="250">
+          <caret line="225" column="0" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/pblog/web/js/title.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="5">
+          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
           <folding>
-            <marker date="1476066130074" expanded="true" signature="2867:2892" placeholder="..." />
-            <marker date="1476066130074" expanded="true" signature="2981:3023" placeholder="..." />
+            <element signature="n#!!doc;n#allTitle#0" expanded="false" />
+            <element signature="n#!!block;n#hideDiv#0" expanded="false" />
+            <element signature="n#!!block;n#getCategory#0" expanded="false" />
+            <element signature="n#!!block;n#getLocalTime#0" expanded="false" />
+            <element signature="n#!!block;n#ormatDate#0" expanded="false" />
+            <marker date="1476076477235" expanded="true" signature="2893:2918" placeholder="..." />
+            <marker date="1476076477235" expanded="true" signature="3007:3049" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sxau/pblog/controller/CategoryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-239">
+          <caret line="30" column="47" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
+          <folding>
+            <element signature="e#1005#1006#0" expanded="true" />
+            <element signature="e#1060#1061#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pblog/web/js/category.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+          <folding>
+            <element signature="n#!!doc;n#getCategoryForCate#0" expanded="false" />
+            <marker date="1476078700902" expanded="true" signature="1238:1263" placeholder="..." />
+            <marker date="1476078700902" expanded="true" signature="1351:1393" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sxau/pblog/controller/TitleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="27" column="65" selection-start-line="27" selection-start-column="65" selection-end-line="27" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

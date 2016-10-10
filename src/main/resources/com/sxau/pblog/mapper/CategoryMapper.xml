@@ -86,6 +86,16 @@
     from category
     where id = #{id,jdbcType=INTEGER}
   </select>
+  <select id="selectCategoryByCategory" parameterType="java.lang.String" resultMap="BaseResultMap">
+      SELECT *
+      FROM category
+      WHERE 1 = 1
+      <if test="category != null and category !=''">
+        AND category = #{category,jdbcType=VARCHAR}
+      </if>
+        ORDER BY ID
+  </select>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from category
     where id = #{id,jdbcType=INTEGER}

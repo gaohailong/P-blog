@@ -47,6 +47,7 @@ function addTitleAft() {
 //获取所有分类操作
 function allCategory() {
     hideDiv();
+    getCategoryForCate();
     $("#d_category").css("display", "block");
 }
 
@@ -152,3 +153,4 @@ function ormatDate(dateNum) {
         return s + str;
     }
 }
+

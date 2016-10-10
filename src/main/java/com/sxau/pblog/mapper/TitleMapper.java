@@ -19,7 +19,7 @@ public interface TitleMapper {
     List<Title> selectByExampleWithBLOBs(TitleExample example);
 
     //分页
-    List<Title> selectTitleByTitleName(@Param("titleName") String userName);
+    List<Title> selectTitleByTitleName(@Param("titleName") String titleName);
 
     List<Title> selectByExample(TitleExample example);
 
