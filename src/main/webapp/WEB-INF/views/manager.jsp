@@ -74,7 +74,7 @@
                                                                                        onclick="allTitle()">所有文章</a>
                             </li>
                             <li class="list-group-item" style="padding-left: 30px;"><a href="javascript:void(0)"
-                                                                                       onclick="addTitle()">添加文章</a>
+                                                                                       onclick="addTitlePre()">添加文章</a>
                             </li>
                             <!--<li class="list-group-item" style="padding-left: 30px;"><a  href="javascript:void(0)" onclick="setIframeHtml(allTitle)">Bootply</a></li>-->
                         </ul>
@@ -157,20 +157,18 @@
                 <h3> 填写文章</h3>
                 <div class="row form-horizontal" style="padding: 10px 15px 15px;">
                     <div class="form-group">
-                        <label for="inputEmail3" class="col-sm-2 control-label">标题</label>
+                        <label class="col-sm-2 control-label">标题</label>
                         <div class="col-sm-8">
                             <input type="email" class="form-control" id="inputEmail3" placeholder="标题">
                         </div>
                     </div>
                     <div class="col-sm-1"></div>
                     <div class="form-group col-sm-11">
-                        <script id="container" name="content" type="text/plain">这里写你的初始化内容</script>
+                        <script id="container" name="content" type="text/plain"></script>
                         <script type="text/javascript">
                             var editor = UE.getEditor('container')
-
-                            //测试文件成功
-                            function test() {
-                                alert(editor.getContent());
+                            function getContentByUeditor() {
+                                return editor.getContent();
                             }
                         </script>
                     </div>
@@ -179,18 +177,15 @@
                         <label class="col-sm-1 control-label">分类</label>
                         <div class="col-sm-2">
                             <select class="form-control" id="s_category">
-                               <%-- <option>1</option>
-                                <option>2</option>--%>
+                                <%-- <option>1</option>
+                                 <option>2</option>--%>
                             </select>
                         </div>
                         <label class="col-sm-1 control-label">显示</label>
                         <div class="col-sm-2">
-                            <select class="form-control">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
+                            <select class="form-control" id="d_YN">
+                                <option>是</option>
+                                <option>否</option>
                             </select>
                         </div>
                         <label class="col-sm-1 control-label">排序</label>
@@ -206,7 +201,9 @@
                     </div>
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-8">
-                            <button type="button" class="btn btn-primary btn-lg btn-block">确认提交</button>
+                            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="addTitleAft()">
+                                确认提交
+                            </button>
                         </div>
                     </div>
                 </div>

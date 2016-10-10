@@ -12,4 +12,6 @@ public interface TitleService {
     List<Title> findAllTitle();
 
     PagedResult<Title> queryByPage(String titleName, Integer pageNo, Integer pageSize);
+
+    void addTitle(String titleName, String titleContent, String titleCate, String titleDisplay);
 }

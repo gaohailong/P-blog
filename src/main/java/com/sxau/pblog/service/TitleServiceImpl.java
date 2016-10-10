@@ -5,10 +5,12 @@ import com.sxau.pblog.mapper.TitleMapper;
 import com.sxau.pblog.pojo.Title;
 import com.sxau.pblog.service.IService.TitleService;
 import com.sxau.pblog.utils.BeanUtil;
+import com.sxau.pblog.utils.DateUtil;
 import com.sxau.pblog.utils.PagedResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -27,7 +29,17 @@ public class TitleServiceImpl implements TitleService {
     public PagedResult<Title> queryByPage(String titleName, Integer pageNo, Integer pageSize) {
         pageNo = pageNo == null ? 1 : pageNo;
         pageSize = pageSize == null ? 10 : pageSize;
-        PageHelper.startPage(pageNo, pageSize);  //startPage是告诉拦截器说我要开始分页了。分页参数是这两个。
+        PageHelper.startPage(pageNo, pageSize);
         return BeanUtil.toPagedResult(titleMapper.selectTitleByTitleName(titleName));
+    }
+
+    public void addTitle(String titleName, String titleContent, String titleCate, String titleDisplay) {
+        Title title = new Title();
+        title.setArticlename(titleName);
+        title.setArticlecontent(titleContent);
+        title.setCategory(titleCate);
+//        title.setIsshow(false);
+        title.setDate(new Date());
+        titleMapper.insert(title);
     }
 }

@@ -9,11 +9,39 @@ function allTitle() {
     $("#d_title").css("display", "block");
 }
 
-//添加文章的操作
-function addTitle() {
+//添加文章前期的操作
+function addTitlePre() {
     hideDiv();
     getCategory();
     $("#i_title").css("display", "block");
+}
+
+//添加文章后期的操作
+function addTitleAft() {
+    var titleName = $("#inputEmail3").val();
+    var titleContent = getContentByUeditor();
+    var titleCate = $("#s_category :selected").text();
+    var titleDisplay = $("#d_YN :selected").text();
+    alert(titleName + "ddd" + titleCate + "+++" + titleDisplay + "aaaa" + titleContent);
+    var sendParams = {
+        'titleName': titleName,
+        'titleContent': titleContent,
+        'titleCate': titleCate,
+        'titleDisplay': titleDisplay
+    };
+    alert(sendParams.titleName);
+    $.ajax({
+        type: "POST",
+        url: "/title/addTitle",
+        dataType: "JSON",
+        data: sendParams,
+        success: function (data) {
+            //TODO 返回200显示成功添加
+        },
+        error: function (jqXHR) {
+            alert("发生错误" + jqXHR.status);
+        }
+    });
 }
 
 //获取所有分类操作
@@ -53,8 +81,8 @@ function getTitleNet(id) {
     var reqParams = {'page': pageNumber, 'pageNumber': pageSize};
     $.ajax({
         type: "GET",
-        url: "/title/findTitle",
         data: reqParams,
+        url: "/title/findTitle",
         dataType: "JSON",
         success: function (data) {
             var dataList = data.dataList;
@@ -74,7 +102,7 @@ function getTitleNet(id) {
                 //文章数据项的添加
                 $("#d_body").append(
                     "<tr><td>" + value.id + "</td><td>" + value.articlename + "</td><td>" + value.readnum + "</td><td>" +
-                    getLocalTime(value.date) + "</td><td>" + value.isshow + "</td><td>"
+                    ormatDate(value.date) + "</td><td>" + value.isshow + "</td><td>"
                     + value.category + "</td><td>Otto</td><td><a href='#'><img src='pblog/web/images/update.png' style='width: 20px;height: 20px;'>" +
                     "</a><a href='#'><img src='pblog/web/images/delete.png' style='width: 20px;height: 20px;margin-left: 5px;'></a></td></tr>"
                 );
@@ -86,8 +114,9 @@ function getTitleNet(id) {
     });
 }
 
-//查询分类
+//获取所有分类
 function getCategory() {
+    $("#s_category").empty();
     $.ajax({
         type: "GET",
         url: "/category/findAllCategory",
@@ -95,7 +124,7 @@ function getCategory() {
         success: function (data) {
             $(data).each(function (index, value) {
                 $("#s_category").append(
-                    "<option id='" + value.id + "'>value.category</option>"
+                    "<option id='" + value.id + "'>" + value.category + "</option>"
                 );
             });
         },
@@ -108,4 +137,18 @@ function getCategory() {
 //时间转换工具
 function getLocalTime(nS) {
     return new Date(parseInt(nS)).toLocaleString().replace(/:\d{1,2}$/, ' ');
+}
+
+function ormatDate(dateNum) {
+    var date = new Date(dateNum);
+    return date.getFullYear() + "-" + fixZero(date.getMonth() + 1, 2) + "-" + fixZero(date.getDate(), 2) + " " + fixZero(date.getHours(), 2) + ":" + fixZero(date.getMinutes(), 2) + ":" + fixZero(date.getSeconds(), 2);
+    function fixZero(num, length) {
+        var str = "" + num;
+        var len = str.length;
+        var s = "";
+        for (var i = length; i-- > len;) {
+            s += "0";
+        }
+        return s + str;
+    }
 }

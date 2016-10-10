@@ -7,13 +7,8 @@ import com.wordnik.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
-import javax.lang.model.type.ErrorType;
-import java.util.List;
 
 /**
  * Created by gaohailong on 2016/9/25.
@@ -26,14 +21,30 @@ public class TitleController {
     @Autowired
     private TitleService titleService;
 
-    @RequestMapping(value = "/findTitle", method = RequestMethod.GET)
+    /**
+     * 后台管理部分
+     */
     @ResponseBody
-    public PagedResult<Title> queryByPage(@ApiParam(required = true, name = "page", value = "页数") int page, @ApiParam(required = true, name = "pageNumber", value = "条数") int pageNumber) {
+    @RequestMapping(value = "/findTitle", method = RequestMethod.GET)
+    public PagedResult<Title> queryByPage(@ApiParam(required = true, name = "page", value = "页数") @RequestParam(value = "page") int page, @ApiParam(required = true, name = "pageNumber", value = "条数") @RequestParam(value = "pageNumber") int pageNumber) {
         PagedResult<Title> pagedResult = titleService.queryByPage(null, page, pageNumber);//null表示查全部
         return pagedResult;
     }
 
-    @ApiOperation(value = "获得商品信息", notes = "获取商品信息(用于数据同步)", httpMethod = "GET", produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    @RequestMapping(value = "/addTitle", method = RequestMethod.POST)
+    public void addTitle(@RequestParam(value = "titleName", required = false) String titleName, @RequestParam(value = "titleContent") String titleContent, @RequestParam(value = "titleCate") String titleCate, @RequestParam(value = "titleDisplay") String titleDisplay) {
+        titleService.addTitle(titleName, titleContent, titleCate, titleDisplay);
+    }
+    /**
+     *前台展示部分
+     */
+
+    /**
+     *app部分
+     */
+
+    /*@ApiOperation(value = "获得商品信息", notes = "获取商品信息(用于数据同步)", httpMethod = "GET", produces = MediaType.APPLICATION_JSON_VALUE)
     @ApiResponses(value = {@ApiResponse(code = 200, message = "商品信息"),
             @ApiResponse(code = 201, message = "(token验证失败)", response = String.class),
             @ApiResponse(code = 202, message = "(系统错误)", response = String.class)})
@@ -42,7 +53,7 @@ public class TitleController {
     public List<Title> testJson() {
         List<Title> titles = titleService.findAllTitle();
         return titles;
-    }
+    }*/
 /*
     @ApiOperation(value = "获得文章信息", notes = "获取文章信息", httpMethod = "GET", produces = MediaType.APPLICATION_JSON_VALUE)
     @ApiResponses(value = {@ApiResponse(code = 200, message = "文章信息"),
