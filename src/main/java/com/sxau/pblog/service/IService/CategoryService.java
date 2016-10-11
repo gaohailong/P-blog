@@ -10,5 +10,8 @@ import java.util.List;
  */
 public interface CategoryService {
     List<Category> getAllCategory();
+
     PagedResult<Category> queryByPage(String categoryName, Integer pageNo, Integer pageSize);
+
+    void addCategory(String headName);
 }

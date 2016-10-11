@@ -38,8 +38,8 @@ public class TitleServiceImpl implements TitleService {
         title.setArticlename(titleName);
         title.setArticlecontent(titleContent);
         title.setCategory(titleCate);
-//        title.setIsshow(false);
+        title.setIsshow(false);
         title.setDate(new Date());
-        titleMapper.insert(title);
+        titleMapper.insertSelective(title);
     }
 }

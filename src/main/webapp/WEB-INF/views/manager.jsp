@@ -238,17 +238,17 @@
                 <div class="row form-horizontal" style="padding: 10px 15px 15px;">
                     <div class="form-group">
                         <label class="col-sm-offset-2 col-sm-1 control-label">标题</label>
-                        <div class="col-sm-3">
-                            <input type="email" class="form-control" id="test2" placeholder="标题">
+                        <div class="col-sm-7">
+                            <input type="email" class="form-control" id="c_title" placeholder="标题">
                         </div>
-                        <label class=" col-sm-1 control-label">名称</label>
-                        <div class="col-sm-3">
-                            <input type="email" class="form-control" id="test" placeholder="名称">
-                        </div>
+                        <%-- <label class=" col-sm-1 control-label">名称</label>
+                       <div class="col-sm-3">
+                            <input type="email" class="form-control" id="c_title" placeholder="名称">
+                        </div>--%>
                     </div>
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-8">
-                            <button type="button" class="btn btn-primary btn-lg btn-block">确认提交</button>
+                            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="addCategoryForCate()">确认提交</button>
                         </div>
                     </div>
                 </div>

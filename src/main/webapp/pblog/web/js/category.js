@@ -6,7 +6,7 @@ function getCategoryForCate(id) {
     $("#c_body").empty();
     $("#c-page").empty();
     //设置一些默认值
-    var pageSize = 2;
+    var pageSize = 10;
     var pageNumber = id;
     if (pageNumber == undefined) {
         pageNumber = 1;
@@ -39,6 +39,24 @@ function getCategoryForCate(id) {
                     "</a></td></tr>"
                 );
             });
+        },
+        error: function (jqXHR) {
+            alert("发生错误" + jqXHR.status);
+        }
+    });
+}
+
+//添加分类
+function addCategoryForCate() {
+    var headName = $("#c_title").val();
+    var sendParams = {'headName': headName};
+    $.ajax({
+        type: "POST",
+        data: sendParams,
+        url: "/category/addCategory",
+        dataType: "JSON",
+        success: function (data) {
+            //TODO 返回200显示成功添加
         },
         error: function (jqXHR) {
             alert("发生错误" + jqXHR.status);

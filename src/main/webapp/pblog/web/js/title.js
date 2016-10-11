@@ -22,24 +22,22 @@ function addTitleAft() {
     var titleContent = getContentByUeditor();
     var titleCate = $("#s_category :selected").text();
     var titleDisplay = $("#d_YN :selected").text();
-    alert(titleName + "ddd" + titleCate + "+++" + titleDisplay + "aaaa" + titleContent);
     var sendParams = {
         'titleName': titleName,
         'titleContent': titleContent,
         'titleCate': titleCate,
         'titleDisplay': titleDisplay
     };
-    alert(sendParams.titleName);
     $.ajax({
         type: "POST",
+        data: sendParams,
         url: "/title/addTitle",
         dataType: "JSON",
-        data: sendParams,
         success: function (data) {
             //TODO 返回200显示成功添加
         },
         error: function (jqXHR) {
-            alert("发生错误" + jqXHR.status);
+            alert("发生错误啦" + jqXHR.status);
         }
     });
 }
@@ -72,7 +70,7 @@ function getTitleNet(id) {
     $("#t-page").empty();
 
     //设置一些默认值
-    var pageSize = 2;
+    var pageSize = 10;
     var pageNumber = id;
     if (pageNumber == undefined) {
         pageNumber = 1;

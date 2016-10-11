@@ -24,6 +24,14 @@ public class TitleController {
     /**
      * 后台管理部分
      */
+
+    /**
+     * 查询文章
+     *
+     * @param page
+     * @param pageNumber
+     * @return
+     */
     @ResponseBody
     @RequestMapping(value = "/findTitle", method = RequestMethod.GET)
     public PagedResult<Title> queryByPage(@ApiParam(required = true, name = "page", value = "页数") @RequestParam(value = "page") int page, @ApiParam(required = true, name = "pageNumber", value = "条数") @RequestParam(value = "pageNumber") int pageNumber) {
@@ -31,9 +39,16 @@ public class TitleController {
         return pagedResult;
     }
 
+    /**
+     * 添加文章
+     * @param titleName
+     * @param titleContent
+     * @param titleCate
+     * @param titleDisplay
+     */
     @ResponseBody
     @RequestMapping(value = "/addTitle", method = RequestMethod.POST)
-    public void addTitle(@RequestParam(value = "titleName") String titleName, @RequestParam(value = "titleContent") String titleContent, @RequestParam(value = "titleCate") String titleCate, @RequestParam(value = "titleDisplay") String titleDisplay) {
+    public void addTitle(@RequestParam(value = "titleName",required = true) String titleName, @RequestParam(value = "titleContent",required = true) String titleContent, @RequestParam(value = "titleCate") String titleCate, @RequestParam(value = "titleDisplay") String titleDisplay) {
         titleService.addTitle(titleName, titleContent, titleCate, titleDisplay);
     }
     /**

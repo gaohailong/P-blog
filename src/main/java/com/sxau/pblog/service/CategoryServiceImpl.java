@@ -33,4 +33,11 @@ public class CategoryServiceImpl implements CategoryService {
         PageHelper.startPage(pageNo, pageSize);
         return BeanUtil.toPagedResult(categoryMapper.selectCategoryByCategory(categoryName));
     }
+
+    @Override
+    public void addCategory(String headName) {
+        Category category = new Category();
+        category.setCategory(headName);
+        categoryMapper.insertSelective(category);
+    }
 }
