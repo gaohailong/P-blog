@@ -66,20 +66,22 @@ function addCategoryForCate() {
 
 //删除分类
 function deleteCateById(id) {
-    var id = id;
-    var sendParams = {
-        'id': id
-    };
-    $.ajax({
-        type: "GET",
-        data: sendParams,
-        url: "/category/deleteCate",
-        dataType: "JSON",
-        success: function (data) {
-            alert(data);
-        },
-        error: function (jqXHR) {
-            alert("发生错误" + jqXHR.status);
-        }
-    });
+    if(confirm("确定要删除吗？")){
+        var id = id;
+        var sendParams = {
+            'id': id
+        };
+        $.ajax({
+            type: "GET",
+            data: sendParams,
+            url: "/category/deleteCate",
+            dataType: "JSON",
+            success: function (data) {
+                alert(data);
+            },
+            error: function (jqXHR) {
+                alert("发生错误" + jqXHR.status);
+            }
+        });
+    }
 }

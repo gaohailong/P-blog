@@ -64,7 +64,7 @@ public class CategoryController extends BaseController {
 
     @ResponseBody
     @RequestMapping(value = "/deleteCate", method = RequestMethod.GET)
-    public String deleteTitleById(@RequestParam(value = "id", required = true) int id) throws Exception {
+    public String deleteCateById(@RequestParam(value = "id", required = true) int id) throws Exception {
         int num = categoryService.deleteCate(id);
         return responseStringToJsonForCUD(num, 1);
     }

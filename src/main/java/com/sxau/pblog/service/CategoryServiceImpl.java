@@ -49,7 +49,7 @@ public class CategoryServiceImpl implements CategoryService {
     @Override
     public int deleteCate(int id) {
         Category category = categoryMapper.selectByPrimaryKey(id);
-        if (category != null) {
+        if (category.getId() != null) {
             int num = categoryMapper.deleteByPrimaryKey(id);
             return num;
         }

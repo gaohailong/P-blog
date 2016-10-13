@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 @Api(value = "product", description = "商品管理", produces = MediaType.APPLICATION_JSON_VALUE)
 @Controller
 @RequestMapping("/title")
-public class TitleController {
+public class TitleController extends BaseController {
     //service类
     @Autowired
     private TitleService titleService;
@@ -49,19 +49,22 @@ public class TitleController {
      */
     @ResponseBody
     @RequestMapping(value = "/addTitle", method = RequestMethod.POST)
-    public void addTitle(@RequestParam(value = "titleName", required = true) String titleName, @RequestParam(value = "titleContent", required = true) String titleContent, @RequestParam(value = "titleCate") String titleCate, @RequestParam(value = "titleDisplay") String titleDisplay) {
-        titleService.addTitle(titleName, titleContent, titleCate, titleDisplay);
+    public String addTitle(@RequestParam(value = "titleName", required = true) String titleName, @RequestParam(value = "titleContent", required = true) String titleContent, @RequestParam(value = "titleCate") String titleCate, @RequestParam(value = "titleDisplay") String titleDisplay) throws Exception {
+        int num = titleService.addTitle(titleName, titleContent, titleCate, titleDisplay);
+        if (num != 0) {
+            return responseStringToJson("添加成功！");
+        }
+        return responseStringToJson("添加失败！");
     }
 
     @ResponseBody
     @RequestMapping(value = "/deleteTitle", method = RequestMethod.GET)
-    public int deleteTitleById(@RequestParam(value = "id", required = true) int id) {
+    public String deleteTitleById(@RequestParam(value = "id", required = true) int id) throws Exception {
         int num = titleService.deleteTitle(id);
-        if (num == 0) {
-            return 200;
-        } else {
-            return 201;
+        if (num != 0) {
+            return responseStringToJson("删除成功！");
         }
+        return responseStringToJson("删除失败！");
     }
     /**
      *前台展示部分

@@ -35,19 +35,28 @@ public class TitleServiceImpl implements TitleService {
     }
 
     @Override
-    public void addTitle(String titleName, String titleContent, String titleCate, String titleDisplay) {
-        Title title = new Title();
-        title.setArticlename(titleName);
-        title.setArticlecontent(titleContent);
-        title.setCategory(titleCate);
-        title.setIsshow(false);
-        title.setDate(new Date());
-        titleMapper.insertSelective(title);
+    public int addTitle(String titleName, String titleContent, String titleCate, String titleDisplay) {
+        List<Title> titles = titleMapper.selectTitleByTitleName(titleName);
+        if (titles.size() == 0) {
+            Title title = new Title();
+            title.setArticlename(titleName);
+            title.setArticlecontent(titleContent);
+            title.setCategory(titleCate);
+            title.setIsshow(false);
+            title.setDate(new Date());
+            return titleMapper.insertSelective(title);
+        }
+        return 0;
     }
 
     @Override
     public int deleteTitle(int id) {
-        int num = titleMapper.deleteByPrimaryKey(id);
-        return num;
+        System.out.print("getId()"+id);
+        Title title = titleMapper.selectByPrimaryKey(id);
+        if (title.getId() != null) {
+            int num = titleMapper.deleteByPrimaryKey(id);
+            return num;
+        }
+        return 0;
     }
 }
