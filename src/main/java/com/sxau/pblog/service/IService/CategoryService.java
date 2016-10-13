@@ -13,5 +13,7 @@ public interface CategoryService {
 
     PagedResult<Category> queryByPage(String categoryName, Integer pageNo, Integer pageSize);
 
-    void addCategory(String headName);
+    int addCategory(String headName);
+
+    int deleteCate(int id);
 }

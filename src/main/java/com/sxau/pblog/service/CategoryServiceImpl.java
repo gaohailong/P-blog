@@ -35,9 +35,24 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public void addCategory(String headName) {
-        Category category = new Category();
-        category.setCategory(headName);
-        categoryMapper.insertSelective(category);
+    public int addCategory(String headName) {
+        Category category = null;
+        List<Category> cate = categoryMapper.selectCategoryByCategory(headName);
+        if (cate.size() == 0) {
+            category = new Category();
+            category.setCategory(headName);
+            return categoryMapper.insertSelective(category);
+        }
+        return 0;
+    }
+
+    @Override
+    public int deleteCate(int id) {
+        Category category = categoryMapper.selectByPrimaryKey(id);
+        if (category != null) {
+            int num = categoryMapper.deleteByPrimaryKey(id);
+            return num;
+        }
+        return 0;
     }
 }

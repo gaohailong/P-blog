@@ -1,5 +1,7 @@
 package com.sxau.pblog.controller;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sxau.pblog.pojo.Category;
 import com.sxau.pblog.pojo.Title;
 import com.sxau.pblog.service.IService.CategoryService;
@@ -19,7 +21,7 @@ import java.util.List;
  */
 @Controller
 @RequestMapping("/category")
-public class CategoryController {
+public class CategoryController extends BaseController {
     //分类的service
     @Autowired
     private CategoryService categoryService;
@@ -53,11 +55,19 @@ public class CategoryController {
         return pagedResult;
     }
 
+    @ResponseBody
     @RequestMapping(value = "/addCategory", method = RequestMethod.POST)
-    public void addCategory(@RequestParam(value = "headName") String headName) {
-        categoryService.addCategory(headName);
+    public String addCategory(@RequestParam(value = "headName") String headName) throws Exception {
+        int num = categoryService.addCategory(headName);
+        return responseStringToJsonForCUD(num, 0);
     }
 
+    @ResponseBody
+    @RequestMapping(value = "/deleteCate", method = RequestMethod.GET)
+    public String deleteTitleById(@RequestParam(value = "id", required = true) int id) throws Exception {
+        int num = categoryService.deleteCate(id);
+        return responseStringToJsonForCUD(num, 1);
+    }
     /**
      * 前台部分
      */

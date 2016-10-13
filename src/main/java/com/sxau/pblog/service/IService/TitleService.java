@@ -14,4 +14,6 @@ public interface TitleService {
     PagedResult<Title> queryByPage(String titleName, Integer pageNo, Integer pageSize);
 
     void addTitle(String titleName, String titleContent, String titleCate, String titleDisplay);
+
+    int deleteTitle(int id);
 }

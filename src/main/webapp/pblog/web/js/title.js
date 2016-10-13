@@ -42,6 +42,30 @@ function addTitleAft() {
     });
 }
 
+//删除文章
+function deleteTitleById(id) {
+    var id = id;
+    var sendParams = {
+        'id': id
+    };
+    $.ajax({
+        type: "GET",
+        data: sendParams,
+        url: "/title/deleteTitle",
+        dataType: "JSON",
+        success: function (data) {
+            if (data == 200) {
+                alert("删除成功！");
+            }
+            // alert(data);
+            //TODO 返回200显示成功添加
+        },
+        error: function (jqXHR) {
+            alert("发生错误啦" + jqXHR.status);
+        }
+    });
+}
+
 //获取所有分类操作
 function allCategory() {
     hideDiv();
@@ -98,12 +122,12 @@ function getTitleNet(id) {
             }
 
             $(dataList).each(function (index, value) {
-                //文章数据项的添加
+                //文章数据项的添加((index+1)*pageNo)
                 $("#d_body").append(
-                    "<tr><td>" + value.id + "</td><td>" + value.articlename + "</td><td>" + value.readnum + "</td><td>" +
+                    "<tr><td>" + ((pageNo - 1) * pageSize + index+1) + "</td><td>" + value.articlename + "</td><td>" + value.readnum + "</td><td>" +
                     ormatDate(value.date) + "</td><td>" + value.isshow + "</td><td>"
                     + value.category + "</td><td>Otto</td><td><a href='#'><img src='pblog/web/images/update.png' style='width: 20px;height: 20px;'>" +
-                    "</a><a href='#'><img src='pblog/web/images/delete.png' style='width: 20px;height: 20px;margin-left: 5px;'></a></td></tr>"
+                    "</a><a href='#' onclick='javascript:deleteTitleById(" + value.id + ")'><img src='pblog/web/images/delete.png' style='width: 20px;height: 20px;margin-left: 5px;'></a></td></tr>"
                 );
             });
         },

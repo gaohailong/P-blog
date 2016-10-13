@@ -5,7 +5,6 @@ import com.sxau.pblog.mapper.TitleMapper;
 import com.sxau.pblog.pojo.Title;
 import com.sxau.pblog.service.IService.TitleService;
 import com.sxau.pblog.utils.BeanUtil;
-import com.sxau.pblog.utils.DateUtil;
 import com.sxau.pblog.utils.PagedResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,11 +20,13 @@ public class TitleServiceImpl implements TitleService {
     @Autowired
     private TitleMapper titleMapper;
 
+    @Override
     public List<Title> findAllTitle() {
         List<Title> titles = titleMapper.selectByExample(null);
         return titles;
     }
 
+    @Override
     public PagedResult<Title> queryByPage(String titleName, Integer pageNo, Integer pageSize) {
         pageNo = pageNo == null ? 1 : pageNo;
         pageSize = pageSize == null ? 10 : pageSize;
@@ -33,6 +34,7 @@ public class TitleServiceImpl implements TitleService {
         return BeanUtil.toPagedResult(titleMapper.selectTitleByTitleName(titleName));
     }
 
+    @Override
     public void addTitle(String titleName, String titleContent, String titleCate, String titleDisplay) {
         Title title = new Title();
         title.setArticlename(titleName);
@@ -41,5 +43,11 @@ public class TitleServiceImpl implements TitleService {
         title.setIsshow(false);
         title.setDate(new Date());
         titleMapper.insertSelective(title);
+    }
+
+    @Override
+    public int deleteTitle(int id) {
+        int num = titleMapper.deleteByPrimaryKey(id);
+        return num;
     }
 }

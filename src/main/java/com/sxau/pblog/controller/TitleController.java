@@ -41,6 +41,7 @@ public class TitleController {
 
     /**
      * 添加文章
+     *
      * @param titleName
      * @param titleContent
      * @param titleCate
@@ -48,8 +49,19 @@ public class TitleController {
      */
     @ResponseBody
     @RequestMapping(value = "/addTitle", method = RequestMethod.POST)
-    public void addTitle(@RequestParam(value = "titleName",required = true) String titleName, @RequestParam(value = "titleContent",required = true) String titleContent, @RequestParam(value = "titleCate") String titleCate, @RequestParam(value = "titleDisplay") String titleDisplay) {
+    public void addTitle(@RequestParam(value = "titleName", required = true) String titleName, @RequestParam(value = "titleContent", required = true) String titleContent, @RequestParam(value = "titleCate") String titleCate, @RequestParam(value = "titleDisplay") String titleDisplay) {
         titleService.addTitle(titleName, titleContent, titleCate, titleDisplay);
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/deleteTitle", method = RequestMethod.GET)
+    public int deleteTitleById(@RequestParam(value = "id", required = true) int id) {
+        int num = titleService.deleteTitle(id);
+        if (num == 0) {
+            return 200;
+        } else {
+            return 201;
+        }
     }
     /**
      *前台展示部分

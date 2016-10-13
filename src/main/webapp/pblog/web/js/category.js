@@ -32,10 +32,10 @@ function getCategoryForCate(id) {
 
             $(datalist).each(function (index, value) {
                 $("#c_body").append(
-                    "<tr><td>" + value.id + "</td>" +
+                    "<tr><td>" + ((pageNo - 1) * pageSize + index+1) + "</td>" +
                     "<td>" + value.category + "</td>" +
-                    "<td><a href='#'><img src='pblog/web/images/update.png'style='width: 20px;height: 20px;'></a>" +
-                    "<a href='#'><img src='pblog/web/images/delete.png'style='width: 20px;height: 20px;margin-left: 5px;'>" +
+                    "<td><a href='#' ><img src='pblog/web/images/update.png'style='width: 20px;height: 20px;'></a>" +
+                    "<a href='#' onclick='javascript:deleteCateById(" + value.id + ")'><img src='pblog/web/images/delete.png'style='width: 20px;height: 20px;margin-left: 5px;'>" +
                     "</a></td></tr>"
                 );
             });
@@ -56,7 +56,27 @@ function addCategoryForCate() {
         url: "/category/addCategory",
         dataType: "JSON",
         success: function (data) {
-            //TODO 返回200显示成功添加
+            alert(data);
+        },
+        error: function (jqXHR) {
+            alert("发生错误" + jqXHR.status);
+        }
+    });
+}
+
+//删除分类
+function deleteCateById(id) {
+    var id = id;
+    var sendParams = {
+        'id': id
+    };
+    $.ajax({
+        type: "GET",
+        data: sendParams,
+        url: "/category/deleteCate",
+        dataType: "JSON",
+        success: function (data) {
+            alert(data);
         },
         error: function (jqXHR) {
             alert("发生错误" + jqXHR.status);
