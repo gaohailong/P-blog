@@ -34,6 +34,7 @@ public class TitleController extends BaseController {
      */
     @ResponseBody
     @RequestMapping(value = "/findTitle", method = RequestMethod.GET)
+    @ApiOperation(value = "分页查询", httpMethod = "GET", response = ApiResponse.class, notes = "分页获取对象")
     public PagedResult<Title> queryByPage(@ApiParam(required = true, name = "page", value = "页数") @RequestParam(value = "page") int page, @ApiParam(required = true, name = "pageNumber", value = "条数") @RequestParam(value = "pageNumber") int pageNumber) {
         PagedResult<Title> pagedResult = titleService.queryByPage(null, page, pageNumber);//null表示查全部
         return pagedResult;

@@ -14,9 +14,9 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
  * Created by gaohailong on 2016/9/26.
  */
 @Configuration
+@ComponentScan("com.sxau.pblog.*")
 @EnableWebMvc
 @EnableSwagger //Loads the spring beans required by the framework
-@ComponentScan("com.sxau.pblog.controller")
 public class SwaggerConfig {
 
     private SpringSwaggerConfig springSwaggerConfig;

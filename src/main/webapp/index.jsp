@@ -45,6 +45,5 @@
         </div>
     </div>
 </div>
-<a href="#" onclick="javascript:login()">test</a>
 </body>
 </html>
