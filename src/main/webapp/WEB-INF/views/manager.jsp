@@ -122,6 +122,25 @@
                         </ul>
                     </div>
                 </div>
+                <div class="panel panel-default" style="margin-top: 0px;">
+                    <div class="panel-heading" role="tab" id="headingFour"
+                         style="color: #ffffff;background-image:linear-gradient(to bottom,#f5f5f5 0,#293543 0%)">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"
+                               aria-expanded="false" aria-controls="collapseThree">
+                                信息统计
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel"
+                         aria-labelledby="headingThree">
+                        <ul class="list-group">
+                            <li class="list-group-item" style="padding-left: 30px;"><a href="#">Bootply</a></li>
+                            <li class="list-group-item" style="padding-left: 30px;"><a href="#">Bootply</a></li>
+                            <li class="list-group-item" style="padding-left: 30px;"><a href="#">Bootply</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col-lg-8 "

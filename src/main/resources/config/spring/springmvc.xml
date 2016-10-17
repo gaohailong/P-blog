@@ -14,7 +14,6 @@
     </bean>
     <bean class="com.sxau.pblog.config.SwaggerConfig"/>
     <bean class="com.mangofactory.swagger.configuration.SpringSwaggerConfig"/>
-
     <!--swagger配置需要添加-->
     <context:annotation-config/>
     <mvc:default-servlet-handler/>
