@@ -6,7 +6,7 @@
     <result column="articleName" property="articlename" jdbcType="CHAR" />
     <result column="sort" property="sort" jdbcType="INTEGER" />
     <result column="articleImg" property="articleimg" jdbcType="CHAR" />
-    <result column="isShow" property="isshow" jdbcType="BIT" />
+    <result column="isShow" property="isshow" jdbcType="CHAR" />
     <result column="readNum" property="readnum" jdbcType="INTEGER" />
     <result column="date" property="date" jdbcType="DATE" />
     <result column="category" property="category" jdbcType="CHAR" />
@@ -145,7 +145,7 @@
       date, category, articleContent
       )
     values (#{id,jdbcType=INTEGER}, #{articlename,jdbcType=CHAR}, #{sort,jdbcType=INTEGER}, 
-      #{articleimg,jdbcType=CHAR}, #{isshow,jdbcType=BIT}, #{readnum,jdbcType=INTEGER}, 
+      #{articleimg,jdbcType=CHAR}, #{isshow,jdbcType=CHAR}, #{readnum,jdbcType=INTEGER},
       #{date,jdbcType=DATE}, #{category,jdbcType=CHAR}, #{articlecontent,jdbcType=LONGVARCHAR}
       )
   </insert>
@@ -194,7 +194,7 @@
         #{articleimg,jdbcType=CHAR},
       </if>
       <if test="isshow != null" >
-        #{isshow,jdbcType=BIT},
+        #{isshow,jdbcType=CHAR},
       </if>
       <if test="readnum != null" >
         #{readnum,jdbcType=INTEGER},
@@ -232,7 +232,7 @@
         articleImg = #{record.articleimg,jdbcType=CHAR},
       </if>
       <if test="record.isshow != null" >
-        isShow = #{record.isshow,jdbcType=BIT},
+        isShow = #{record.isshow,jdbcType=CHAR},
       </if>
       <if test="record.readnum != null" >
         readNum = #{record.readnum,jdbcType=INTEGER},
@@ -257,7 +257,7 @@
       articleName = #{record.articlename,jdbcType=CHAR},
       sort = #{record.sort,jdbcType=INTEGER},
       articleImg = #{record.articleimg,jdbcType=CHAR},
-      isShow = #{record.isshow,jdbcType=BIT},
+      isShow = #{record.isshow,jdbcType=CHAR},
       readNum = #{record.readnum,jdbcType=INTEGER},
       date = #{record.date,jdbcType=DATE},
       category = #{record.category,jdbcType=CHAR},
@@ -272,7 +272,7 @@
       articleName = #{record.articlename,jdbcType=CHAR},
       sort = #{record.sort,jdbcType=INTEGER},
       articleImg = #{record.articleimg,jdbcType=CHAR},
-      isShow = #{record.isshow,jdbcType=BIT},
+      isShow = #{record.isshow,jdbcType=CHAR},
       readNum = #{record.readnum,jdbcType=INTEGER},
       date = #{record.date,jdbcType=DATE},
       category = #{record.category,jdbcType=CHAR}
@@ -293,7 +293,7 @@
         articleImg = #{articleimg,jdbcType=CHAR},
       </if>
       <if test="isshow != null" >
-        isShow = #{isshow,jdbcType=BIT},
+        isShow = #{isshow,jdbcType=CHAR},
       </if>
       <if test="readnum != null" >
         readNum = #{readnum,jdbcType=INTEGER},
@@ -315,7 +315,7 @@
     set articleName = #{articlename,jdbcType=CHAR},
       sort = #{sort,jdbcType=INTEGER},
       articleImg = #{articleimg,jdbcType=CHAR},
-      isShow = #{isshow,jdbcType=BIT},
+      isShow = #{isshow,jdbcType=CHAR},
       readNum = #{readnum,jdbcType=INTEGER},
       date = #{date,jdbcType=DATE},
       category = #{category,jdbcType=CHAR},
@@ -327,7 +327,7 @@
     set articleName = #{articlename,jdbcType=CHAR},
       sort = #{sort,jdbcType=INTEGER},
       articleImg = #{articleimg,jdbcType=CHAR},
-      isShow = #{isshow,jdbcType=BIT},
+      isShow = #{isshow,jdbcType=CHAR},
       readNum = #{readnum,jdbcType=INTEGER},
       date = #{date,jdbcType=DATE},
       category = #{category,jdbcType=CHAR}

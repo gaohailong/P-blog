@@ -58,6 +58,13 @@ public class TitleController extends BaseController {
         return responseStringToJson("添加失败！");
     }
 
+    /**
+     * 通过id删除文章
+     *
+     * @param id
+     * @return
+     * @throws Exception
+     */
     @ResponseBody
     @RequestMapping(value = "/deleteTitle", method = RequestMethod.GET)
     public String deleteTitleById(@RequestParam(value = "id", required = true) int id) throws Exception {
@@ -66,6 +73,12 @@ public class TitleController extends BaseController {
             return responseStringToJson("删除成功！");
         }
         return responseStringToJson("删除失败！");
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/selectById", method = RequestMethod.GET)
+    public Title selectTitleById(@RequestParam(value = "id", required = true) int id) throws Exception {
+        return titleService.selectById(id);
     }
     /**
      *前台展示部分

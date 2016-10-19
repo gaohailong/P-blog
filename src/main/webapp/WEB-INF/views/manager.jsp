@@ -126,14 +126,33 @@
                     <div class="panel-heading" role="tab" id="headingFour"
                          style="color: #ffffff;background-image:linear-gradient(to bottom,#f5f5f5 0,#293543 0%)">
                         <h4 class="panel-title">
-                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour"
                                aria-expanded="false" aria-controls="collapseThree">
-                                信息统计
+                                微信发布
                             </a>
                         </h4>
                     </div>
                     <div id="collapseFour" class="panel-collapse collapse" role="tabpanel"
-                         aria-labelledby="headingThree">
+                         aria-labelledby="headingFour">
+                        <ul class="list-group">
+                            <li class="list-group-item" style="padding-left: 30px;"><a href="#">Bootply</a></li>
+                            <li class="list-group-item" style="padding-left: 30px;"><a href="#">Bootply</a></li>
+                            <li class="list-group-item" style="padding-left: 30px;"><a href="#">Bootply</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel panel-default" style="margin-top: 0px;">
+                    <div class="panel-heading" role="tab" id="headingFive"
+                         style="color: #ffffff;background-image:linear-gradient(to bottom,#f5f5f5 0,#293543 0%)">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive"
+                               aria-expanded="false" aria-controls="collapseFive">
+                                信息统计
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel"
+                         aria-labelledby="headingFive">
                         <ul class="list-group">
                             <li class="list-group-item" style="padding-left: 30px;"><a href="#">Bootply</a></li>
                             <li class="list-group-item" style="padding-left: 30px;"><a href="#">Bootply</a></li>
@@ -158,7 +177,7 @@
                             <th>发表日期</th>
                             <th>状态</th>
                             <th>所属分类</th>
-                            <th>置顶</th>
+                            <%--<th>置顶</th>--%>
                             <th>操作</th>
                         </tr>
                         </thead>
@@ -174,11 +193,11 @@
             <!--end 所有文章-->
             <!--start 填写文章-->
             <div id="i_title" class="col-lg-12">
-                <h3> 填写文章</h3>
+                <h3> 填写文章</h3>--%>
                 <div class="row form-horizontal" style="padding: 10px 15px 15px;">
                     <div class="form-group">
                         <label class="col-sm-2 control-label">标题</label>
-                        <div class="col-sm-8">
+                        <div class="col-sm-8">--%>
                             <input type="email" class="form-control" id="inputEmail3" placeholder="标题">
                         </div>
                     </div>
@@ -193,7 +212,7 @@
                         </script>
                     </div>
                     <div class="form-group">
-                        <div class="col-sm-1"></div>
+                        <div class="col-sm-1 col-sm-offset-1"></div>
                         <label class="col-sm-1 control-label">分类</label>
                         <div class="col-sm-2">
                             <select class="form-control" id="s_category">
@@ -201,7 +220,7 @@
                                  <option>2</option>--%>
                             </select>
                         </div>
-                        <label class="col-sm-1 control-label">显示</label>
+                        <label class="col-sm-1 col-sm-offset-1 control-label">显示</label>
                         <div class="col-sm-2">
                             <select class="form-control" id="d_YN">
                                 <option>是</option>
@@ -229,6 +248,67 @@
                 </div>
             </div>
             <!--end 填写文章-->
+            <!--start 修改文章-->
+            <div id="u_title" class="col-lg-12">
+                <h3> 修改文章</h3>
+                <div class="row form-horizontal" style="padding: 10px 15px 15px;">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">标题</label>
+                        <div class="col-sm-8">
+                            <input type="email" class="form-control" id="u_head" placeholder="标题">
+                        </div>
+                    </div>
+                    <div class="col-sm-1"></div>
+                    <div class="form-group col-sm-11">
+                        <script id="container" name="content" type="text/plain"></script>
+                        <script type="text/javascript">
+                            var editor = UE.getEditor('container')
+                            editor.ready(function () {
+                                //这里写要编辑的文本
+                                ue.setContent('<p>hello!</p>');
+                            });
+                            /* function getContentByUeditor() {
+                             return editor.getContent();
+                             }*/
+                        </script>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-1 col-sm-offset-1"></div>
+                        <label class="col-sm-1 control-label">分类</label>
+                        <div class="col-sm-2">
+                            <select class="form-control" id="u_category">
+                                <%-- <option>1</option>
+                                 <option>2</option>--%>
+                            </select>
+                        </div>
+                        <label class="col-sm-1 col-sm-offset-1 control-label">显示</label>
+                        <div class="col-sm-2">
+                            <select class="form-control" id="u_YN">
+                                <option>是</option>
+                                <option>否</option>
+                            </select>
+                        </div>
+                        <%-- <label class="col-sm-1 control-label">排序</label>
+                         <div class="col-sm-2">
+                             <select class="form-control">
+                                 <option>1</option>
+                                 <option>2</option>
+                                 <option>3</option>
+                                 <option>4</option>
+                                 <option>5</option>
+                             </select>
+                         </div>--%>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-8">
+                            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="addTitleAft()">
+                                确认提交
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end 修改文章-->
             <!--start 所有分类-->
             <div id="d_category" class="col-lg-12">
                 <h3> 分类列表</h3>
@@ -267,7 +347,9 @@
                     </div>
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-8">
-                            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="addCategoryForCate()">确认提交</button>
+                            <button type="button" class="btn btn-primary btn-lg btn-block"
+                                    onclick="addCategoryForCate()">确认提交
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -277,6 +359,5 @@
         </div>
     </div>
 </div>
-
 </body>
 </html>

@@ -83,6 +83,7 @@ function hideDiv() {
     $("#i_title").css("display", "none");
     $("#d_category").css("display", "none");
     $("#i_category").css("display", "none");
+    $("#u_title").css("display", "none");
 }
 
 //获取所有文章的网络操作
@@ -124,7 +125,7 @@ function getTitleNet(id) {
                 $("#d_body").append(
                     "<tr><td>" + ((pageNo - 1) * pageSize + index + 1) + "</td><td>" + value.articlename + "</td><td>" + value.readnum + "</td><td>" +
                     ormatDate(value.date) + "</td><td>" + value.isshow + "</td><td>"
-                    + value.category + "</td><td>Otto</td><td><a href='#'><img src='pblog/web/images/update.png' style='width: 20px;height: 20px;'>" +
+                    + value.category + "</td><td><a href='#' onclick='javascript:updateTitleById(" + value.id + ")'><img src='pblog/web/images/update.png' style='width: 20px;height: 20px;'>" +
                     "</a><a href='#' onclick='javascript:deleteTitleById(" + value.id + ")'><img src='pblog/web/images/delete.png' style='width: 20px;height: 20px;margin-left: 5px;'></a></td></tr>"
                 );
             });
@@ -145,6 +146,56 @@ function getCategory() {
         success: function (data) {
             $(data).each(function (index, value) {
                 $("#s_category").append(
+                    "<option id='" + value.id + "'>" + value.category + "</option>"
+                );
+            });
+        },
+        error: function (jqXHR) {
+            alert("发生错误" + jqXHR.status);
+        }
+    });
+}
+
+//修改文章的查询文章
+function updateTitleById(id) {
+    var sendParams = {'id': id};
+    //查询文章显示在界面上
+    $.ajax({
+        type: "GET",
+        url: "/title/selectById",
+        data: sendParams,
+        dataType: "JSON",
+        success: function (data) {
+            alert(data.articlename+"--"+data.articlecontent+"--"+data.category+"--"+data.isshow+"--");
+            changeUI(data.articlename,data.articlecontent,data.category,data.isshow);
+        },
+        error: function (jsXHR) {
+            alert("发生错误" + jsXHR);
+        }
+    });
+}
+//修改改变UI
+function changeUI(head, content, cate, display) {
+    hideDiv();
+    $("#u_title").css("display", "block");
+    getCategoryForUpdate();
+    $("#u_head").val(head);
+    //TODO 考虑设置多页结合
+    // $("#u_container").html(content);
+    $("#u_category option[text=cate]").attr("selected", true);
+    $("#u_YN option[text=display]").attr("selected", true);
+
+}
+
+function getCategoryForUpdate() {
+    $("#u_category").empty();
+    $.ajax({
+        type: "GET",
+        url: "/category/findAllCategory",
+        dataType: "JSON",
+        success: function (data) {
+            $(data).each(function (index, value) {
+                $("#u_category").append(
                     "<option id='" + value.id + "'>" + value.category + "</option>"
                 );
             });
