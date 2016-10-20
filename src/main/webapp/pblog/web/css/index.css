@@ -14,6 +14,13 @@ iframe {
     border-image: none;
 }
 
+#cms_login {
+    background: url("../images/login_two.jpg") no-repeat;
+}
+#cms{
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
 #d_title {
     display: none;
 }
@@ -34,6 +41,6 @@ iframe {
     display: none;
 }
 
-#u_c_category{
+#u_c_category {
     display: none;
 }

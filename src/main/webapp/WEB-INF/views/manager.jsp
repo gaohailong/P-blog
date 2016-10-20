@@ -209,6 +209,7 @@
                             function getContentByUeditor() {
                                 return editor.getContent();
                             }
+//                            addContentForEditor();
                         </script>
                     </div>
                     <div class="form-group">
@@ -249,7 +250,7 @@
             </div>
             <!--end 填写文章-->
             <!--start 修改文章-->
-            <div id="u_title" class="col-lg-12">
+         <%--   <div id="u_title" class="col-lg-12">
                 <h3> 修改文章</h3>
                 <div class="row form-horizontal" style="padding: 10px 15px 15px;">
                     <div class="form-group">
@@ -267,9 +268,9 @@
                                 //这里写要编辑的文本
                                 editor.setContent('<p>hello!</p>');
                             });
-                            /* function getContentByUeditor() {
-                             return editor.getContent();
-                             }*/
+                            function getContentByUeditor() {
+                                return editor.getContent();
+                            }
                         </script>
                     </div>
                     <div class="form-group">
@@ -277,8 +278,8 @@
                         <label class="col-sm-1 control-label">分类</label>
                         <div class="col-sm-2">
                             <select class="form-control" id="u_t_category">
-                                <%-- <option>1</option>
-                                 <option>2</option>--%>
+                                &lt;%&ndash; <option>1</option>
+                                 <option>2</option>&ndash;%&gt;
                             </select>
                         </div>
                         <label class="col-sm-1 col-sm-offset-1 control-label">显示</label>
@@ -288,7 +289,7 @@
                                 <option>否</option>
                             </select>
                         </div>
-                        <%-- <label class="col-sm-1 control-label">排序</label>
+                        &lt;%&ndash; <label class="col-sm-1 control-label">排序</label>
                          <div class="col-sm-2">
                              <select class="form-control">
                                  <option>1</option>
@@ -297,7 +298,7 @@
                                  <option>4</option>
                                  <option>5</option>
                              </select>
-                         </div>--%>
+                         </div>&ndash;%&gt;
                     </div>
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-8">
@@ -307,7 +308,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>--%>
             <!--end 修改文章-->
             <!--start 所有分类-->
             <div id="d_category" class="col-lg-12">

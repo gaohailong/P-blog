@@ -24,9 +24,9 @@
     <link href="<%=request.getContextPath()%>/pblog/web/css/index.css" rel="stylesheet">
     <script language="JavaScript" src="<%=request.getContextPath()%>/pblog/web/js/blog.js"></script>
 </head>
-<body>
-<div class="container">
-    <div class="row col-md-6 col-md-offset-3" style="margin-top: 10%">
+<body id="cms_login">
+<div class="container" >
+    <div class="row col-md-6 col-md-offset-3" style="margin-top: 15%">
         <div class="panel panel-primary ">
             <div class="panel-heading col-md-12">登录</div>
             <div class="panel-body">

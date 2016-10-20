@@ -168,7 +168,7 @@ function updateTitleById(id) {
         data: sendParams,
         dataType: "JSON",
         success: function (data) {
-            alert(data.articlename + "--" + data.articlecontent + "--" + data.category + "--" + data.isshow + "--");
+            // alert(data.articlename + "--" + data.articlecontent + "--" + data.category + "--" + data.isshow + "--");
             changeUI(data.articlename, data.articlecontent, data.category, data.isshow);
         },
         error: function (jsXHR) {
@@ -180,14 +180,44 @@ function updateTitleById(id) {
 //修改改变UI
 function changeUI(head, content, cate, display) {
     hideDiv();
+    $("#i_title").css("display", "block");
+    $("#inputEmail3").val(head);
+    //TODO 获取分类
+    getCategory();
+    $("#s_category option").each(function () {
+        if ($(this).text() == cate) {
+            $(this).attr("selected", "selected");
+        }
+    });
+    $("#d_YN option").each(function () {
+        if ($(this).text() == display) {
+            $(this).attr("selected", "selected");
+        }
+    });
+    addContentForEditor(content);
+    // $("#s_category option[value=cate]").attr("selected","true");
+    // alert("head" + head + "content" + content + "cate" + cate + "display" + display);
     // $("#i_title").remove();
-    $("#u_title").css("display", "block");
+    // $("#u_title").css("display", "block");
     // getCategoryForUpdate();
     // $("#u_head").val(head);
     //TODO 考虑设置多页结合(操作添加文章页面)
     // $("#u_container").html(content);
     // $("#u_category option[text=cate]").attr("selected", true);
     // $("#u_YN option[text=display]").attr("selected", true);
+}
+
+//为编辑器添加文本
+function addContentForEditor(content) {
+    editor.ready(function () {
+        //这里写要编辑的文本
+        editor.setContent(content);
+    });
+}
+
+//TODO 当点击添加文章时候将数据清空（有可能需要，有可能不需要）
+function hideAddTilteContent() {
+    $("#inputEmail3").val();
 }
 
 function getCategoryForUpdate() {
