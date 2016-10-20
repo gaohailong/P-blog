@@ -158,8 +158,8 @@ function getCategory() {
 }
 
 //修改文章的查询文章
+//TODO
 function updateTitleById(id) {
-    $("#i_title").remove();
     var sendParams = {'id': id};
     //查询文章显示在界面上
     $.ajax({
@@ -182,12 +182,12 @@ function changeUI(head, content, cate, display) {
     hideDiv();
     // $("#i_title").remove();
     $("#u_title").css("display", "block");
-    getCategoryForUpdate();
-    $("#u_head").val(head);
+    // getCategoryForUpdate();
+    // $("#u_head").val(head);
     //TODO 考虑设置多页结合(操作添加文章页面)
     // $("#u_container").html(content);
-    $("#u_category option[text=cate]").attr("selected", true);
-    $("#u_YN option[text=display]").attr("selected", true);
+    // $("#u_category option[text=cate]").attr("selected", true);
+    // $("#u_YN option[text=display]").attr("selected", true);
 }
 
 function getCategoryForUpdate() {

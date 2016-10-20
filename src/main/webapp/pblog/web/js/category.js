@@ -55,7 +55,7 @@ function selectCateById(id) {
         data: sendParams,
         dataType: "JSON",
         success: function (data) {
-            changeUI(data.id, data.category);
+            changeUIForCate(data.id, data.category);
         },
         error: function (jqXHR) {
             alert("发生错误" + jqXHR);
@@ -63,7 +63,7 @@ function selectCateById(id) {
     });
 }
 
-function changeUI(id, cate) {
+function changeUIForCate(id, cate) {
     hideDiv();
     $("#u_c_id").val(id);
     $("#u_c_head").val(cate);
