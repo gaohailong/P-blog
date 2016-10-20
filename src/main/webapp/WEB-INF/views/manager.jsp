@@ -193,11 +193,11 @@
             <!--end 所有文章-->
             <!--start 填写文章-->
             <div id="i_title" class="col-lg-12">
-                <h3> 填写文章</h3>--%>
+                <h3> 填写文章</h3>
                 <div class="row form-horizontal" style="padding: 10px 15px 15px;">
                     <div class="form-group">
                         <label class="col-sm-2 control-label">标题</label>
-                        <div class="col-sm-8">--%>
+                        <div class="col-sm-8">
                             <input type="email" class="form-control" id="inputEmail3" placeholder="标题">
                         </div>
                     </div>
@@ -255,7 +255,7 @@
                     <div class="form-group">
                         <label class="col-sm-2 control-label">标题</label>
                         <div class="col-sm-8">
-                            <input type="email" class="form-control" id="u_head" placeholder="标题">
+                            <input type="email" class="form-control" id="u_t_head" placeholder="标题">
                         </div>
                     </div>
                     <div class="col-sm-1"></div>
@@ -265,7 +265,7 @@
                             var editor = UE.getEditor('container')
                             editor.ready(function () {
                                 //这里写要编辑的文本
-                                ue.setContent('<p>hello!</p>');
+                                editor.setContent('<p>hello!</p>');
                             });
                             /* function getContentByUeditor() {
                              return editor.getContent();
@@ -276,7 +276,7 @@
                         <div class="col-sm-1 col-sm-offset-1"></div>
                         <label class="col-sm-1 control-label">分类</label>
                         <div class="col-sm-2">
-                            <select class="form-control" id="u_category">
+                            <select class="form-control" id="u_t_category">
                                 <%-- <option>1</option>
                                  <option>2</option>--%>
                             </select>
@@ -355,6 +355,31 @@
                 </div>
             </div>
             <!--end 填写分类--->
+            <!--start 修改分类-->
+            <div id="u_c_category" class="col-lg-12">
+                <h3> 修改分类</h3>
+                <div class="row form-horizontal" style="padding: 10px 15px 15px;">
+                    <div class="form-group">
+                        <label class="col-sm-offset-2 col-sm-1 control-label">标题</label>
+                        <div class="col-sm-7">
+                            <input type="hidden" class="form-control" id="u_c_id">
+                            <input type="text" class="form-control" id="u_c_head" placeholder="标题">
+                        </div>
+                        <%-- <label class=" col-sm-1 control-label">名称</label>
+                       <div class="col-sm-3">
+                            <input type="email" class="form-control" id="c_title" placeholder="名称">
+                        </div>--%>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-8">
+                            <button type="button" class="btn btn-primary btn-lg btn-block"
+                                    onclick="updateCateById()">确认提交
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end 修改分类--->
             <%--<iframe src="allTitle.html" class="col-lg-12" scrolling="no" id="right_iframe"></iframe>--%>
         </div>
     </div>

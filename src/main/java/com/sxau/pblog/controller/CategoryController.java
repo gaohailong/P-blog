@@ -1,12 +1,8 @@
 package com.sxau.pblog.controller;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sxau.pblog.pojo.Category;
-import com.sxau.pblog.pojo.Title;
 import com.sxau.pblog.service.IService.CategoryService;
 import com.sxau.pblog.utils.PagedResult;
-import com.wordnik.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -41,8 +37,15 @@ public class CategoryController extends BaseController {
         return categoryService.getAllCategory();
     }
 
+    @ResponseBody
+    @RequestMapping(value = "/selectCategoryById", method = RequestMethod.GET)
+    public Category getCategoryById(@RequestParam(value = "id", required = true) int id) {
+        Category category = categoryService.getCateById(id);
+        return category;
+    }
+
     /**
-     * 查询所有分类
+     * 分页查询
      *
      * @param page
      * @param pageNumber
@@ -67,6 +70,20 @@ public class CategoryController extends BaseController {
     public String deleteCateById(@RequestParam(value = "id", required = true) int id) throws Exception {
         int num = categoryService.deleteCate(id);
         return responseStringToJsonForCUD(num, 1);
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/updateCateById", method = RequestMethod.POST)
+    public String updateCateById(@RequestParam(value = "id", required = true) int id, @RequestParam(value = "cate", required = true) String cate) throws Exception {
+        Category category = new Category();
+        category.setId(id);
+        category.setCategory(cate);
+        int num = categoryService.updateCategoryById(category);
+        if (num > 0) {
+            return responseStringToJson("修改成功！");
+        } else {
+            return responseStringToJson("修改失败！");
+        }
     }
     /**
      * 前台部分

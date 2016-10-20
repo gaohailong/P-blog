@@ -84,6 +84,7 @@ function hideDiv() {
     $("#d_category").css("display", "none");
     $("#i_category").css("display", "none");
     $("#u_title").css("display", "none");
+    $("#u_c_category").css("display", "none");
 }
 
 //获取所有文章的网络操作
@@ -158,6 +159,7 @@ function getCategory() {
 
 //修改文章的查询文章
 function updateTitleById(id) {
+    $("#i_title").remove();
     var sendParams = {'id': id};
     //查询文章显示在界面上
     $.ajax({
@@ -166,17 +168,19 @@ function updateTitleById(id) {
         data: sendParams,
         dataType: "JSON",
         success: function (data) {
-            alert(data.articlename+"--"+data.articlecontent+"--"+data.category+"--"+data.isshow+"--");
-            changeUI(data.articlename,data.articlecontent,data.category,data.isshow);
+            alert(data.articlename + "--" + data.articlecontent + "--" + data.category + "--" + data.isshow + "--");
+            changeUI(data.articlename, data.articlecontent, data.category, data.isshow);
         },
         error: function (jsXHR) {
             alert("发生错误" + jsXHR);
         }
     });
 }
+
 //修改改变UI
 function changeUI(head, content, cate, display) {
     hideDiv();
+    // $("#i_title").remove();
     $("#u_title").css("display", "block");
     getCategoryForUpdate();
     $("#u_head").val(head);
@@ -184,7 +188,6 @@ function changeUI(head, content, cate, display) {
     // $("#u_container").html(content);
     $("#u_category option[text=cate]").attr("selected", true);
     $("#u_YN option[text=display]").attr("selected", true);
-
 }
 
 function getCategoryForUpdate() {
