@@ -227,7 +227,7 @@
                                 <option>否</option>
                             </select>
                         </div>
-                        <label class="col-sm-1 control-label">排序</label>
+                        <%--<label class="col-sm-1 control-label">排序</label>
                         <div class="col-sm-2">
                             <select class="form-control">
                                 <option>1</option>
@@ -236,7 +236,7 @@
                                 <option>4</option>
                                 <option>5</option>
                             </select>
-                        </div>
+                        </div>--%>
                     </div>
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-8">

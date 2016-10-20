@@ -184,7 +184,7 @@ function changeUI(head, content, cate, display) {
     $("#u_title").css("display", "block");
     getCategoryForUpdate();
     $("#u_head").val(head);
-    //TODO 考虑设置多页结合
+    //TODO 考虑设置多页结合(操作添加文章页面)
     // $("#u_container").html(content);
     $("#u_category option[text=cate]").attr("selected", true);
     $("#u_YN option[text=display]").attr("selected", true);
