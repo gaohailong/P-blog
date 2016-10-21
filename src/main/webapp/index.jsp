@@ -9,41 +9,91 @@
 <html>
 <head>
     <title>Title</title>
-
     <!-- Bootstrap -->
-    <link href="<%=request.getContextPath()%>/pblog/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <script src="<%=request.getContextPath()%>/pblog/web/js/jquery-1.11.3.js" language="javascript"></script>
-    <script src="<%=request.getContextPath()%>/pblog/bootstrap/js/bootstrap.js" language="javascript"></script>
-    <link href="<%=request.getContextPath()%>/pblog/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+    <script src="<%=request.getContextPath()%>/pblog/web/js/jQuery.md5.js" language="javascript"></script>
 
-    <!--[if lt IE 9]>
-    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <link href="<%=request.getContextPath()%>/pblog/web/css/index.css" rel="stylesheet">
     <script language="JavaScript" src="<%=request.getContextPath()%>/pblog/web/js/blog.js"></script>
+    <link href="<%=request.getContextPath()%>/pblog/web/css/style.css" rel="stylesheet">
+    <script language="JavaScript" src="<%=request.getContextPath()%>/pblog/web/js/Particleground.js"></script>
+    <script language="JavaScript" src="<%=request.getContextPath()%>/pblog/web/js/verificationNumbers.js"></script>
+    <style>
+        body {
+            height: 100%;
+            background: #16a085;
+            overflow: hidden;
+        }
+
+        canvas {
+            z-index: -1;
+            position: absolute;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            //粒子背景特效
+            $('body').particleground({
+                dotColor: '#5cbdaa',
+                lineColor: '#5cbdaa'
+            });
+            //验证码
+//            createCode();
+            //测试提交，对接程序删除即可
+            $(".submit_btn").click(function () {
+                location.href = "javascrpt:;"/*tpa=http://***index.html*/;
+            });
+        });
+    </script>
 </head>
-<body id="cms_login">
-<div class="container" >
+<body>
+<canvas class="pg-canvas" width="1600" height="745"></canvas>
+<dl class="admin_login">
+    <dt>
+        <strong>博客后台管理系统</strong>
+        <em>Management System</em>
+    </dt>
+    <dd class="user_icon">
+        <input type="text" placeholder="用户名" id="username" class="login_txtbx">
+    </dd>
+    <dd class="pwd_icon">
+        <input type="password" placeholder="密码" id="password" class="login_txtbx">
+    </dd>
+    <!-- <dd class="val_icon">
+     <div class="checkcode">
+       <input type="text" id="J_codetext" placeholder="验证码" maxlength="4" class="login_txtbx">
+       <canvas class="J_codeimg" id="myCanvas" onclick="createCode()">对不起，您的浏览器不支持canvas，请下载最新版浏览器!</canvas>
+     </div>
+     <input type="button" value="验证码核验" class="ver_btn" onclick="validate();">
+      </dd> -->
+    <dd>
+        <input type="button" value="立即登陆" class="submit_btn" onclick="login()">
+    </dd>
+    <dd>
+        <p>© 2015-2016 jq22 版权所有</p>
+        <%--<p>陕B2-8998988-1</p>--%>
+    </dd>
+</dl>
+
+
+<%--<div class="container">
     <div class="row col-md-6 col-md-offset-3" style="margin-top: 15%">
         <div class="panel panel-primary ">
             <div class="panel-heading col-md-12">登录</div>
-            <div class="panel-body">
-                <form method="post" action="/queryToken">
-                    <div class="form-group">
-                        <label>User name</label>
-                        <input type="text" class="form-control" id="username" placeholder="User name">
-                    </div>
-                    <div class="form-group">
-                        <label>Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Password">
-                    </div>
-                    <button type="submit" class="btn btn-primary" >Submit</button>
-                </form>
-            </div>
-        </div>
-    </div>
+            <div class="panel-body">--%>
+<%-- <form method="post" action="/queryToken">
+     <div class="form-group">
+         <label>User name</label>
+         <input type="text" class="form-control" id="username" placeholder="User name">
+     </div>
+     <div class="form-group">
+         <label>Password</label>
+         <input type="password" class="form-control" id="password" placeholder="Password">
+     </div>
+     <button type="submit" class="btn btn-primary">Submit</button>
+ </form>--%>
+<%-- </div>
 </div>
+</div>
+</div>--%>
 </body>
 </html>

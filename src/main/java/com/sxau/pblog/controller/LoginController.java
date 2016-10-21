@@ -18,10 +18,10 @@ public class LoginController extends BaseController {
     @Autowired
     private LoginService loginService;
 
-    @RequestMapping(value = "/queryToken", method = RequestMethod.POST)
-    public String redirectPage(HttpServletRequest request, HttpServletResponse response) throws JsonProcessingException {
-
-        return "manager";
+ /*   @RequestMapping(value = "/queryToken", method = RequestMethod.POST)
+    public String loginPage(@RequestParam(value = "username", required = true) String username, @RequestParam(value = "password", required = true) String password) throws JsonProcessingException {
+        System.out.print(username);
+        System.out.print(password);
 //        Admin admin = new Admin();
 //        admin.setAdminname(username);
 //        admin.setAdminpass(password);
@@ -30,5 +30,14 @@ public class LoginController extends BaseController {
 //            return "manager";
 //        }
 //        return responseStringToJson("登录失败");
+        return "/manager";
+    }
+*/
+    @RequestMapping(value = "/queryToken", method = RequestMethod.POST)
+    public String vertifyUser(HttpServletRequest request,HttpServletResponse response) {
+        String username= request.getParameter("username");
+        String password= request.getParameter("password");
+        System.out.print(username+password);
+        return "redirect:/manager";
     }
 }

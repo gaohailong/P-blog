@@ -31,7 +31,6 @@ function addTitlePre() {
 
 //添加文章后期的操作
 function addTitleAft() {
-    alert("a");
     var titleName = $("#inputEmail3").val();
     var titleContent = getContentByUeditor();
     var titleCate = $("#s_category :selected").text();
@@ -267,25 +266,6 @@ function addContentForEditorDoAdd() {
     editor.ready(function () {
         //这里写要编辑的文本
         editor.setContent("");
-    });
-}
-
-function getCategoryForUpdate() {
-    $("#u_category").empty();
-    $.ajax({
-        type: "GET",
-        url: "/category/findAllCategory",
-        dataType: "JSON",
-        success: function (data) {
-            $(data).each(function (index, value) {
-                $("#u_category").append(
-                    "<option id='" + value.id + "'>" + value.category + "</option>"
-                );
-            });
-        },
-        error: function (jqXHR) {
-            alert("发生错误" + jqXHR.status);
-        }
     });
 }
 

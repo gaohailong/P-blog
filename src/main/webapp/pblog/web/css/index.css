@@ -15,7 +15,7 @@ iframe {
 }
 
 #cms_login {
-    background: url("../images/login_two.jpg") no-repeat;
+    /*background: url("../images/login_two.jpg") no-repeat;*/
 }
 #cms{
     background-color: rgba(0, 0, 0, 0.4);

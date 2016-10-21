@@ -54,7 +54,7 @@
             </div><!-- /.col-lg-6 -->
         </div>
     </div>
-    <div class="row" style="background-color: #efefef">
+    <div class="row" style="background-color: #efefef;min-height: 500px">
         <div class="col-lg-3" style="color: #080808;">
             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"
                  style="margin-top: 21px;">
@@ -164,6 +164,9 @@
         </div>
         <div class="col-lg-8 "
              style="background-color: #ffffff;border-radius: 10px; border: #d4d4d4 1px solid;margin: 20px;">
+            <!--TODO start 默认显示页面-->
+            <%--<div id="p_default"></div>--%>
+            <!--end 默认显示页面-->
             <!--start 所有文章-->
             <div id="d_title" class="col-lg-12">
                 <h3> 文章列表</h3>
@@ -250,67 +253,6 @@
                 </div>
             </div>
             <!--end 填写文章-->
-            <!--start 修改文章-->
-            <%--   <div id="u_title" class="col-lg-12">
-                   <h3> 修改文章</h3>
-                   <div class="row form-horizontal" style="padding: 10px 15px 15px;">
-                       <div class="form-group">
-                           <label class="col-sm-2 control-label">标题</label>
-                           <div class="col-sm-8">
-                               <input type="email" class="form-control" id="u_t_head" placeholder="标题">
-                           </div>
-                       </div>
-                       <div class="col-sm-1"></div>
-                       <div class="form-group col-sm-11">
-                           <script id="container" name="content" type="text/plain"></script>
-                           <script type="text/javascript">
-                               var editor = UE.getEditor('container')
-                               editor.ready(function () {
-                                   //这里写要编辑的文本
-                                   editor.setContent('<p>hello!</p>');
-                               });
-                               function getContentByUeditor() {
-                                   return editor.getContent();
-                               }
-                           </script>
-                       </div>
-                       <div class="form-group">
-                           <div class="col-sm-1 col-sm-offset-1"></div>
-                           <label class="col-sm-1 control-label">分类</label>
-                           <div class="col-sm-2">
-                               <select class="form-control" id="u_t_category">
-                                   &lt;%&ndash; <option>1</option>
-                                    <option>2</option>&ndash;%&gt;
-                               </select>
-                           </div>
-                           <label class="col-sm-1 col-sm-offset-1 control-label">显示</label>
-                           <div class="col-sm-2">
-                               <select class="form-control" id="u_YN">
-                                   <option>是</option>
-                                   <option>否</option>
-                               </select>
-                           </div>
-                           &lt;%&ndash; <label class="col-sm-1 control-label">排序</label>
-                            <div class="col-sm-2">
-                                <select class="form-control">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                </select>
-                            </div>&ndash;%&gt;
-                       </div>
-                       <div class="form-group">
-                           <div class="col-sm-offset-2 col-sm-8">
-                               <button type="button" class="btn btn-primary btn-lg btn-block" onclick="addTitleAft()">
-                                   确认提交
-                               </button>
-                           </div>
-                       </div>
-                   </div>
-               </div>--%>
-            <!--end 修改文章-->
             <!--start 所有分类-->
             <div id="d_category" class="col-lg-12">
                 <h3> 分类列表</h3>
