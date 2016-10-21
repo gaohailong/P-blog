@@ -64,4 +64,16 @@ public class TitleServiceImpl implements TitleService {
     public Title selectById(int id) {
         return titleMapper.selectByPrimaryKey(id);
     }
+
+    @Override
+    public int updateTitleById(int id, String head, String content, String titleCate, String titleDisplay) {
+        Title title = new Title();
+        title.setId(id);
+        title.setArticlename(head);
+        title.setArticlecontent(content);
+        title.setCategory(titleCate);
+        title.setIsshow(titleDisplay);
+        int num = titleMapper.updateByPrimaryKeySelective(title);
+        return num;
+    }
 }

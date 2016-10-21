@@ -9,15 +9,29 @@ function allTitle() {
     $("#d_title").css("display", "block");
 }
 
+//修改或添加文章后选择发送到后台的方式
+function selectOpForUpdateAndAdd() {
+    var name = $("#b_t_sub").attr("value");
+    if (name == 0) {
+        addTitleAft();
+    } else if (name == 1) {
+        //TODO 修改文章的后期操作
+        updateTitleById();
+    }
+}
+
 //添加文章前期的操作
 function addTitlePre() {
     hideDiv();
     getCategory();
+    hideAddTitleContent();
+    $("#b_t_sub").attr("value", "0");
     $("#i_title").css("display", "block");
 }
 
 //添加文章后期的操作
 function addTitleAft() {
+    alert("a");
     var titleName = $("#inputEmail3").val();
     var titleContent = getContentByUeditor();
     var titleCate = $("#s_category :selected").text();
@@ -62,6 +76,34 @@ function deleteTitleById(id) {
             }
         });
     }
+}
+
+//修改文章
+function updateTitleById() {
+    var id = $("#b_update").val();
+    var head = $("#inputEmail3").val();
+    var content = getContentByUeditor();
+    var titleCate = $("#s_category :selected").text();
+    var titleDisplay = $("#d_YN :selected").text();
+    var sendParams = {
+        "id": id,
+        "head": head,
+        "content": content,
+        "titleCate": titleCate,
+        "titleDisplay": titleDisplay,
+    };
+    $.ajax({
+        type: "POST",
+        url: "/title/updateById",
+        data: sendParams,
+        dataType: "JSON",
+        success: function (data) {
+            alert(data);
+        },
+        error: function (jqXHR) {
+            alert("发生错误!" + jqXHR);
+        }
+    });
 }
 
 //获取所有分类操作
@@ -126,7 +168,7 @@ function getTitleNet(id) {
                 $("#d_body").append(
                     "<tr><td>" + ((pageNo - 1) * pageSize + index + 1) + "</td><td>" + value.articlename + "</td><td>" + value.readnum + "</td><td>" +
                     ormatDate(value.date) + "</td><td>" + value.isshow + "</td><td>"
-                    + value.category + "</td><td><a href='#' onclick='javascript:updateTitleById(" + value.id + ")'><img src='pblog/web/images/update.png' style='width: 20px;height: 20px;'>" +
+                    + value.category + "</td><td><a href='#' onclick='javascript:updateTitleByIdOfSelect(" + value.id + ")'><img src='pblog/web/images/update.png' style='width: 20px;height: 20px;'>" +
                     "</a><a href='#' onclick='javascript:deleteTitleById(" + value.id + ")'><img src='pblog/web/images/delete.png' style='width: 20px;height: 20px;margin-left: 5px;'></a></td></tr>"
                 );
             });
@@ -158,8 +200,7 @@ function getCategory() {
 }
 
 //修改文章的查询文章
-//TODO
-function updateTitleById(id) {
+function updateTitleByIdOfSelect(id) {
     var sendParams = {'id': id};
     //查询文章显示在界面上
     $.ajax({
@@ -169,7 +210,7 @@ function updateTitleById(id) {
         dataType: "JSON",
         success: function (data) {
             // alert(data.articlename + "--" + data.articlecontent + "--" + data.category + "--" + data.isshow + "--");
-            changeUI(data.articlename, data.articlecontent, data.category, data.isshow);
+            changeUIForTitle(data.id, data.articlename, data.articlecontent, data.category, data.isshow);
         },
         error: function (jsXHR) {
             alert("发生错误" + jsXHR);
@@ -178,11 +219,11 @@ function updateTitleById(id) {
 }
 
 //修改改变UI
-function changeUI(head, content, cate, display) {
+function changeUIForTitle(id, head, content, cate, display) {
     hideDiv();
-    $("#i_title").css("display", "block");
+    $("#b_update").val(id);
+    $("#b_t_sub").attr("value", "1");
     $("#inputEmail3").val(head);
-    //TODO 获取分类
     getCategory();
     $("#s_category option").each(function () {
         if ($(this).text() == cate) {
@@ -194,7 +235,7 @@ function changeUI(head, content, cate, display) {
             $(this).attr("selected", "selected");
         }
     });
-    addContentForEditor(content);
+    addContentForEditorDoUpdate(content);
     // $("#s_category option[value=cate]").attr("selected","true");
     // alert("head" + head + "content" + content + "cate" + cate + "display" + display);
     // $("#i_title").remove();
@@ -208,16 +249,25 @@ function changeUI(head, content, cate, display) {
 }
 
 //为编辑器添加文本
-function addContentForEditor(content) {
+function addContentForEditorDoUpdate(content) {
     editor.ready(function () {
         //这里写要编辑的文本
         editor.setContent(content);
     });
+    $("#i_title").css("display", "block");
 }
 
-//TODO 当点击添加文章时候将数据清空（有可能需要，有可能不需要）
-function hideAddTilteContent() {
-    $("#inputEmail3").val();
+//隐藏文章内容
+function hideAddTitleContent() {
+    $("#inputEmail3").val("");
+    addContentForEditorDoAdd();
+}
+//添加内容给editor
+function addContentForEditorDoAdd() {
+    editor.ready(function () {
+        //这里写要编辑的文本
+        editor.setContent("");
+    });
 }
 
 function getCategoryForUpdate() {

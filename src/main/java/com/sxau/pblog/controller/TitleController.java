@@ -80,6 +80,19 @@ public class TitleController extends BaseController {
     public Title selectTitleById(@RequestParam(value = "id", required = true) int id) throws Exception {
         return titleService.selectById(id);
     }
+
+    @ResponseBody
+    @RequestMapping(value = "/updateById", method = RequestMethod.POST)
+    public String updateTitleById(@RequestParam(value = "id", required = true) int id, @RequestParam(value = "head", required = true) String head,
+                                  @RequestParam(value = "content", required = true) String content, @RequestParam(value = "titleCate", required = true)
+                                          String titleCate, @RequestParam(value = "titleDisplay", required = true) String titleDisplay) throws Exception {
+        int num = titleService.updateTitleById(id, head, content, titleCate, titleDisplay);
+        if (num != 0) {
+            return responseStringToJson("修改成功！");
+        } else {
+            return responseStringToJson("修改失败！");
+        }
+    }
     /**
      *前台展示部分
      */
