@@ -12,7 +12,7 @@ public class Title implements Serializable{
 
     private String articleimg;
 
-    private Boolean isshow;
+    private String isshow;
 
     private Integer readnum;
 
@@ -54,11 +54,11 @@ public class Title implements Serializable{
         this.articleimg = articleimg == null ? null : articleimg.trim();
     }
 
-    public Boolean getIsshow() {
+    public String getIsshow() {
         return isshow;
     }
 
-    public void setIsshow(Boolean isshow) {
+    public void setIsshow(String isshow) {
         this.isshow = isshow;
     }
 

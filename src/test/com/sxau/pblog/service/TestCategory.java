@@ -21,4 +21,9 @@ public class TestCategory extends SpringTestCase {
     public void getAllCategoryFoeCategory() {
         System.out.print(categoryService.queryByPage(null, 1, 2));
     }
+
+    @Test
+    public void getCategoryById(){
+        System.out.print(categoryService.getCateById(1).getId());
+    }
 }

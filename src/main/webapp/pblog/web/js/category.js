@@ -32,9 +32,9 @@ function getCategoryForCate(id) {
 
             $(datalist).each(function (index, value) {
                 $("#c_body").append(
-                    "<tr><td>" + ((pageNo - 1) * pageSize + index+1) + "</td>" +
+                    "<tr><td>" + ((pageNo - 1) * pageSize + index + 1) + "</td>" +
                     "<td>" + value.category + "</td>" +
-                    "<td><a href='#' ><img src='pblog/web/images/update.png'style='width: 20px;height: 20px;'></a>" +
+                    "<td><a href='#' onclick='javascript:selectCateById(" + value.id + ")'><img src='pblog/web/images/update.png'style='width: 20px;height: 20px;'></a>" +
                     "<a href='#' onclick='javascript:deleteCateById(" + value.id + ")'><img src='pblog/web/images/delete.png'style='width: 20px;height: 20px;margin-left: 5px;'>" +
                     "</a></td></tr>"
                 );
@@ -42,6 +42,48 @@ function getCategoryForCate(id) {
         },
         error: function (jqXHR) {
             alert("发生错误" + jqXHR.status);
+        }
+    });
+}
+
+//查询分类
+function selectCateById(id) {
+    var sendParams = {"id": id};
+    $.ajax({
+        type: "GET",
+        url: "/category/selectCategoryById",
+        data: sendParams,
+        dataType: "JSON",
+        success: function (data) {
+            changeUIForCate(data.id, data.category);
+        },
+        error: function (jqXHR) {
+            alert("发生错误" + jqXHR);
+        }
+    });
+}
+
+function changeUIForCate(id, cate) {
+    hideDiv();
+    $("#u_c_id").val(id);
+    $("#u_c_head").val(cate);
+    $("#u_c_category").css("display", "block");
+}
+
+function updateCateById() {
+    var id = $("#u_c_id").val();
+    var cate = $("#u_c_head").val();
+    var sendParams = {"id": id, "cate": cate};
+    $.ajax({
+        type: "POST",
+        data: sendParams,
+        url: "/category/updateCateById",
+        dataType: "JSON",
+        success: function (data) {
+            alert(data);
+        },
+        error: function (jqXHR) {
+            alert("发生错误" + jqXHR);
         }
     });
 }
@@ -66,7 +108,7 @@ function addCategoryForCate() {
 
 //删除分类
 function deleteCateById(id) {
-    if(confirm("确定要删除吗？")){
+    if (confirm("确定要删除吗？")) {
         var id = id;
         var sendParams = {
             'id': id

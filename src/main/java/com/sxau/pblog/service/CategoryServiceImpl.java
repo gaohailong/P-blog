@@ -55,4 +55,16 @@ public class CategoryServiceImpl implements CategoryService {
         }
         return 0;
     }
+
+    @Override
+    public Category getCateById(int id) {
+        Category category = categoryMapper.selectByPrimaryKey(id);
+        return category;
+    }
+
+    @Override
+    public int  updateCategoryById(Category category) {
+        int num = categoryMapper.updateByPrimaryKey(category);
+        return num;
+    }
 }

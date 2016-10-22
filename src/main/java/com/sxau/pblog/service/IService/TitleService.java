@@ -16,4 +16,8 @@ public interface TitleService {
     int addTitle(String titleName, String titleContent, String titleCate, String titleDisplay);
 
     int deleteTitle(int id);
+
+    Title selectById(int id);
+
+    int updateTitleById(int id, String head, String content, String titleCate, String titleDisplay);
 }

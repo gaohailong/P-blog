@@ -2,24 +2,23 @@
  * Created by gaohailong on 2016/9/27.
  */
 
-window.onload = function () {
-    setIframeHeight(document.getElementById('right_iframe'));
-}
 
 function login() {
+    /* var username = $.md5($("#username").val());
+     var password = $.md5($("#password").val());*/
     var username = $("#username").val();
     var password = $("#password").val();
     var reqParams = {'username': username, 'password': password};
     $.ajax({
-        type:"POST",
-        data:reqParams,
+        type: "POST",
+        data: reqParams,
         url: "/queryToken",
-        dataType:"text",
-        success:function (data) {
+        dataType: "JSON",
+        success: function (data) {
             alert(data);
         },
-        error:function (jqXHR) {
-            alert("发生错误"+jqXHR);
+        error: function (jqXHR) {
+            alert("发生错误" + jqXHR);
         }
     });
 }

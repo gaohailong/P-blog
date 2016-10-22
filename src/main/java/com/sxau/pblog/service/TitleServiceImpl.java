@@ -42,7 +42,7 @@ public class TitleServiceImpl implements TitleService {
             title.setArticlename(titleName);
             title.setArticlecontent(titleContent);
             title.setCategory(titleCate);
-            title.setIsshow(false);
+            title.setIsshow(titleDisplay);
             title.setDate(new Date());
             return titleMapper.insertSelective(title);
         }
@@ -51,12 +51,29 @@ public class TitleServiceImpl implements TitleService {
 
     @Override
     public int deleteTitle(int id) {
-        System.out.print("getId()"+id);
+//        System.out.print("getId()"+id);
         Title title = titleMapper.selectByPrimaryKey(id);
         if (title.getId() != null) {
             int num = titleMapper.deleteByPrimaryKey(id);
             return num;
         }
         return 0;
+    }
+
+    @Override
+    public Title selectById(int id) {
+        return titleMapper.selectByPrimaryKey(id);
+    }
+
+    @Override
+    public int updateTitleById(int id, String head, String content, String titleCate, String titleDisplay) {
+        Title title = new Title();
+        title.setId(id);
+        title.setArticlename(head);
+        title.setArticlecontent(content);
+        title.setCategory(titleCate);
+        title.setIsshow(titleDisplay);
+        int num = titleMapper.updateByPrimaryKeySelective(title);
+        return num;
     }
 }

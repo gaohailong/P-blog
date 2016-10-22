@@ -54,7 +54,7 @@
             </div><!-- /.col-lg-6 -->
         </div>
     </div>
-    <div class="row" style="background-color: #efefef">
+    <div class="row" style="background-color: #efefef;min-height: 500px">
         <div class="col-lg-3" style="color: #080808;">
             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"
                  style="margin-top: 21px;">
@@ -126,14 +126,33 @@
                     <div class="panel-heading" role="tab" id="headingFour"
                          style="color: #ffffff;background-image:linear-gradient(to bottom,#f5f5f5 0,#293543 0%)">
                         <h4 class="panel-title">
-                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour"
                                aria-expanded="false" aria-controls="collapseThree">
-                                信息统计
+                                微信发布
                             </a>
                         </h4>
                     </div>
                     <div id="collapseFour" class="panel-collapse collapse" role="tabpanel"
-                         aria-labelledby="headingThree">
+                         aria-labelledby="headingFour">
+                        <ul class="list-group">
+                            <li class="list-group-item" style="padding-left: 30px;"><a href="#">Bootply</a></li>
+                            <li class="list-group-item" style="padding-left: 30px;"><a href="#">Bootply</a></li>
+                            <li class="list-group-item" style="padding-left: 30px;"><a href="#">Bootply</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel panel-default" style="margin-top: 0px;">
+                    <div class="panel-heading" role="tab" id="headingFive"
+                         style="color: #ffffff;background-image:linear-gradient(to bottom,#f5f5f5 0,#293543 0%)">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive"
+                               aria-expanded="false" aria-controls="collapseFive">
+                                信息统计
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel"
+                         aria-labelledby="headingFive">
                         <ul class="list-group">
                             <li class="list-group-item" style="padding-left: 30px;"><a href="#">Bootply</a></li>
                             <li class="list-group-item" style="padding-left: 30px;"><a href="#">Bootply</a></li>
@@ -145,6 +164,9 @@
         </div>
         <div class="col-lg-8 "
              style="background-color: #ffffff;border-radius: 10px; border: #d4d4d4 1px solid;margin: 20px;">
+            <!--TODO start 默认显示页面-->
+            <%--<div id="p_default"></div>--%>
+            <!--end 默认显示页面-->
             <!--start 所有文章-->
             <div id="d_title" class="col-lg-12">
                 <h3> 文章列表</h3>
@@ -158,7 +180,7 @@
                             <th>发表日期</th>
                             <th>状态</th>
                             <th>所属分类</th>
-                            <th>置顶</th>
+                            <%--<th>置顶</th>--%>
                             <th>操作</th>
                         </tr>
                         </thead>
@@ -177,6 +199,7 @@
                 <h3> 填写文章</h3>
                 <div class="row form-horizontal" style="padding: 10px 15px 15px;">
                     <div class="form-group">
+                        <input type="hidden" id="b_update"/>
                         <label class="col-sm-2 control-label">标题</label>
                         <div class="col-sm-8">
                             <input type="email" class="form-control" id="inputEmail3" placeholder="标题">
@@ -190,10 +213,11 @@
                             function getContentByUeditor() {
                                 return editor.getContent();
                             }
+                            //addContentForEditorDoUpdate();
                         </script>
                     </div>
                     <div class="form-group">
-                        <div class="col-sm-1"></div>
+                        <div class="col-sm-1 col-sm-offset-1"></div>
                         <label class="col-sm-1 control-label">分类</label>
                         <div class="col-sm-2">
                             <select class="form-control" id="s_category">
@@ -201,14 +225,14 @@
                                  <option>2</option>--%>
                             </select>
                         </div>
-                        <label class="col-sm-1 control-label">显示</label>
+                        <label class="col-sm-1 col-sm-offset-1 control-label">显示</label>
                         <div class="col-sm-2">
                             <select class="form-control" id="d_YN">
                                 <option>是</option>
                                 <option>否</option>
                             </select>
                         </div>
-                        <label class="col-sm-1 control-label">排序</label>
+                        <%--<label class="col-sm-1 control-label">排序</label>
                         <div class="col-sm-2">
                             <select class="form-control">
                                 <option>1</option>
@@ -217,11 +241,11 @@
                                 <option>4</option>
                                 <option>5</option>
                             </select>
-                        </div>
+                        </div>--%>
                     </div>
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-8">
-                            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="addTitleAft()">
+                            <button id="b_t_sub" type="button" value="0" class="btn btn-primary btn-lg btn-block" onclick="selectOpForUpdateAndAdd()">
                                 确认提交
                             </button>
                         </div>
@@ -267,16 +291,42 @@
                     </div>
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-8">
-                            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="addCategoryForCate()">确认提交</button>
+                            <button type="button" class="btn btn-primary btn-lg btn-block"
+                                    onclick="addCategoryForCate()">确认提交
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
             <!--end 填写分类--->
+            <!--start 修改分类-->
+            <div id="u_c_category" class="col-lg-12">
+                <h3> 修改分类</h3>
+                <div class="row form-horizontal" style="padding: 10px 15px 15px;">
+                    <div class="form-group">
+                        <label class="col-sm-offset-2 col-sm-1 control-label">标题</label>
+                        <div class="col-sm-7">
+                            <input type="hidden" class="form-control" id="u_c_id">
+                            <input type="text" class="form-control" id="u_c_head" placeholder="标题">
+                        </div>
+                        <%-- <label class=" col-sm-1 control-label">名称</label>
+                       <div class="col-sm-3">
+                            <input type="email" class="form-control" id="c_title" placeholder="名称">
+                        </div>--%>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-8">
+                            <button type="button" class="btn btn-primary btn-lg btn-block"
+                                    onclick="updateCateById()">确认提交
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end 修改分类--->
             <%--<iframe src="allTitle.html" class="col-lg-12" scrolling="no" id="right_iframe"></iframe>--%>
         </div>
     </div>
 </div>
-
 </body>
 </html>
