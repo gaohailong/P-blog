@@ -78,7 +78,7 @@
   <sql id="Blob_Column_List" >
     articleContent
   </sql>
-  <select id="selectByExampleWithBLOBs" resultMap="ResultMapWithBLOBs" parameterType="com.sxau.pblog.pojo.TitleExample" >
+  <select id="selectByExampleWithBLOBs" resultMap="ResultMapWithBLOBs" parameterType="com.sxau.pblog.pojo.Title" >
     select
     <if test="distinct" >
       distinct

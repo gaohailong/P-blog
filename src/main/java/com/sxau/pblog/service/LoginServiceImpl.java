@@ -18,22 +18,16 @@ public class LoginServiceImpl implements LoginService {
     private AdminMapper adminMapper;
 
     @Override
-    public boolean vertifyUser(Admin admin) {
-        List<Admin> admins = adminMapper.selectByExample(admin);
-        if (admins.size() == 1) {
+    public boolean vertifyUser(String username, String password) {
+        Admin admin = new Admin();
+        admin.setAdminname(username);
+        admin.setAdminpass(password);
+
+        int admins = adminMapper.countByExample(admin);
+        if (admins == 1) {
             return true;
+        } else {
+            return false;
         }
-        /*for (Admin admin1 : admins) {
-            if (admin1.getAdminname().equals(admin.getAdminname())) {
-                if (admin1.getAdminpass().equals(admin.getAdminpass())) {
-                    return true;
-                } else {
-                    return false;
-                }
-            } else {
-                return false;
-            }
-        }*/
-        return false;
     }
 }

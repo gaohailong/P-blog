@@ -7,5 +7,5 @@ import com.sxau.pblog.pojo.AdminExample;
  * Created by gaohailong on 2016/10/17.
  */
 public interface LoginService {
-    boolean vertifyUser(Admin admin);
+    boolean vertifyUser(String username,String password);
 }

@@ -6,7 +6,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 public interface AdminMapper {
-    int countByExample(AdminExample example);
+    int countByExample(Admin admin);
 
     int deleteByExample(AdminExample example);
 
@@ -17,6 +17,8 @@ public interface AdminMapper {
     int insertSelective(Admin record);
 
     List<Admin> selectByExample(Admin example);
+
+//    int selectByAdmin(Admin admin);
 
     Admin selectByPrimaryKey(Integer id);
 
