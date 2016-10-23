@@ -7,6 +7,16 @@ public class Admin {
 
     private String adminpass;
 
+    private String sessionid;
+
+    public String getSessionid() {
+        return sessionid;
+    }
+
+    public void setSessionid(String sessionid) {
+        this.sessionid = sessionid;
+    }
+
     public Integer getId() {
         return id;
     }

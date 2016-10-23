@@ -5,6 +5,7 @@
         <id column="id" property="id" jdbcType="INTEGER"/>
         <result column="adminName" property="adminname" jdbcType="CHAR"/>
         <result column="adminPass" property="adminpass" jdbcType="CHAR"/>
+        <result column="sessionid" property="sessionid" jdbcType="CHAR"/>
     </resultMap>
     <sql id="Example_Where_Clause">
         <where>
@@ -200,4 +201,10 @@
       adminPass = #{adminpass,jdbcType=CHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+    <!--start 查询-->
+    <select id="selectBySession" parameterType="java.lang.String">
+
+    </select>
+    <!--end 查询-->
 </mapper>

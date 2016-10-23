@@ -11,23 +11,16 @@
         </webroots>
         <sourceRoots>
           <root url="file://$MODULE_DIR$/src/main/java" />
-          <root url="file://$MODULE_DIR$/src/main/resources" />
         </sourceRoots>
       </configuration>
     </facet>
     <facet type="Spring" name="Spring">
       <configuration>
         <fileset id="fileset" name="Spring Application Context" removed="false">
-          <file>file://$MODULE_DIR$/src/main/resources/config/spring/applicationContext-dao.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/config/spring/applicationContext-service.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/config/spring/applicationContext-transaction.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/config/spring/applicationContext-dao.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/config/spring/springmvc.xml</file>
-        </fileset>
-        <fileset id="web application context" name="MVC application context" removed="true">
-          <file>file://$MODULE_DIR$/src/main/webapp/applicationContext-*.xml</file>
-        </fileset>
-        <fileset id="web dispatcherServlet servlet context" name="MVC dispatcherServlet servlet context" removed="true">
-          <file>file://$MODULE_DIR$/src/main/webapp/springmvc.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/config/spring/applicationContext-transaction.xml</file>
         </fileset>
       </configuration>
     </facet>
@@ -43,8 +36,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="commons-codec-1.9" level="project" />
-    <orderEntry type="library" name="commons-logging-1.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.11" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-core:4.1.1.RELEASE" level="project" />
