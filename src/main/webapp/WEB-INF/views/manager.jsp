@@ -41,6 +41,7 @@
     <script language="javascript" src="<%=request.getContextPath()%>/Ueditor/lang/zh-cn/zh-cn.js"></script>
 </head>
 <body>
+<div>${sessionScope.SESSION_ID }</div>
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-12" style="height: 80px;background-color: #ffffff">
