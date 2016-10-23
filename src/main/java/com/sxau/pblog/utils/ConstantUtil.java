@@ -3,7 +3,11 @@ package com.sxau.pblog.utils;
 /**
  * Created by gaohailong on 2016/10/8.
  */
-public class HttpConstants {
+public class ConstantUtil {
+
+    public static final String LOGIN_ERROR="ERROR";
+
+    public static final String LOGIN_SESSION="SESSION_ID";
 
     public static final String SYSTEM_ERROR_MSG = "系统错误";
 

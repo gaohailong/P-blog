@@ -2,7 +2,7 @@ package com.sxau.pblog.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sxau.pblog.utils.HttpConstants;
+import com.sxau.pblog.utils.ConstantUtil;
 import com.sxau.pblog.utils.JsonDateValueProcessor;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
@@ -68,13 +68,13 @@ public class BaseController {
             jsonConfig.registerJsonValueProcessor(Date.class, new JsonDateValueProcessor());
             jsonObj = JSONObject.fromObject(obj, jsonConfig);
 //            logger.info("后端返回数据：" + jsonObj);
-            if (HttpConstants.SERVICE_RESPONSE_SUCCESS_CODE.equals(jsonObj.getString(HttpConstants.SERVICE_RESPONSE_RESULT_FLAG))) {
-                jsonObj.element(HttpConstants.RESPONSE_RESULT_FLAG_ISERROR, false);
-                jsonObj.element(HttpConstants.SERVICE_RESPONSE_RESULT_MSG, "");
+            if (ConstantUtil.SERVICE_RESPONSE_SUCCESS_CODE.equals(jsonObj.getString(ConstantUtil.SERVICE_RESPONSE_RESULT_FLAG))) {
+                jsonObj.element(ConstantUtil.RESPONSE_RESULT_FLAG_ISERROR, false);
+                jsonObj.element(ConstantUtil.SERVICE_RESPONSE_RESULT_MSG, "");
             } else {
-                jsonObj.element(HttpConstants.RESPONSE_RESULT_FLAG_ISERROR, true);
-                String errMsg = jsonObj.getString(HttpConstants.SERVICE_RESPONSE_RESULT_MSG);
-                jsonObj.element(HttpConstants.SERVICE_RESPONSE_RESULT_MSG, errMsg == null ? HttpConstants.SERVICE_RESPONSE_NULL : errMsg);
+                jsonObj.element(ConstantUtil.RESPONSE_RESULT_FLAG_ISERROR, true);
+                String errMsg = jsonObj.getString(ConstantUtil.SERVICE_RESPONSE_RESULT_MSG);
+                jsonObj.element(ConstantUtil.SERVICE_RESPONSE_RESULT_MSG, errMsg == null ? ConstantUtil.SERVICE_RESPONSE_NULL : errMsg);
             }
         }
 //        logger.info("输出结果：{}", jsonObj.toString());
@@ -95,8 +95,8 @@ public class BaseController {
             jsonConfig.registerJsonValueProcessor(Date.class, new JsonDateValueProcessor());
             jsonObj = JSONObject.fromObject(obj, jsonConfig);
 //            logger.info("后端返回数据：" + jsonObj);
-            jsonObj.element(HttpConstants.RESPONSE_RESULT_FLAG_ISERROR, false);
-            jsonObj.element(HttpConstants.SERVICE_RESPONSE_RESULT_MSG, "");
+            jsonObj.element(ConstantUtil.RESPONSE_RESULT_FLAG_ISERROR, false);
+            jsonObj.element(ConstantUtil.SERVICE_RESPONSE_RESULT_MSG, "");
         }
 //        logger.info("输出结果：{}", jsonObj.toString());
         return jsonObj.toString();
@@ -135,8 +135,8 @@ public class BaseController {
             jsonConfig.registerJsonValueProcessor(Date.class, new JsonDateValueProcessor());
             jsonObj = JSONObject.fromObject(obj, jsonConfig);
 //            logger.info("后端返回数据：" + jsonObj);
-            jsonObj.element(HttpConstants.RESPONSE_RESULT_FLAG_ISERROR, false);
-            jsonObj.element(HttpConstants.SERVICE_RESPONSE_RESULT_MSG, msg);
+            jsonObj.element(ConstantUtil.RESPONSE_RESULT_FLAG_ISERROR, false);
+            jsonObj.element(ConstantUtil.SERVICE_RESPONSE_RESULT_MSG, msg);
         }
 //        logger.info("输出结果：{}", jsonObj.toString());
         return jsonObj.toString();
@@ -150,8 +150,8 @@ public class BaseController {
      */
     public String responseFail(String errorMsg) {
         JSONObject jsonObj = new JSONObject();
-        jsonObj.put(HttpConstants.RESPONSE_RESULT_FLAG_ISERROR, true);
-        jsonObj.put(HttpConstants.SERVICE_RESPONSE_RESULT_MSG, errorMsg);
+        jsonObj.put(ConstantUtil.RESPONSE_RESULT_FLAG_ISERROR, true);
+        jsonObj.put(ConstantUtil.SERVICE_RESPONSE_RESULT_MSG, errorMsg);
 //        logger.info("输出结果：{}", jsonObj.toString());
         return jsonObj.toString();
     }

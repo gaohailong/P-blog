@@ -5,7 +5,8 @@
   Time: 15:56
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Title</title>
@@ -53,10 +54,13 @@
         <em>Management System</em>
     </dt>
     <dd class="user_icon">
-        <input type="text" placeholder="用户名" name="username"  class="login_txtbx">
+        <input type="text" placeholder="用户名" name="username" class="login_txtbx">
     </dd>
     <dd class="pwd_icon">
         <input type="password" placeholder="密码" name="password" class="login_txtbx">
+    </dd>
+    <dd class="error_icon" style="color: #e81019;text-align: center">
+        ${sessionScope.ERROR }
     </dd>
     <!-- <dd class="val_icon">
      <div class="checkcode">
@@ -66,7 +70,7 @@
      <input type="button" value="验证码核验" class="ver_btn" onclick="validate();">
       </dd> -->
     <dd>
-        <input type="submit" value="立即登陆" class="submit_btn" >
+        <input type="submit" value="立即登陆" class="submit_btn">
     </dd>
     <dd>
         <p>© 2015-2016 jq22 版权所有</p>
