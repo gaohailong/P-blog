@@ -30,4 +30,13 @@ public class LoginServiceImpl implements LoginService {
             return false;
         }
     }
+
+    public int updateSessionByAdmin(String sessionid, String username, String password) {
+        Admin admin = new Admin();
+        admin.setAdminname(username);
+        admin.setAdminpass(password);
+        admin.setSessionid(sessionid);
+        int result = adminMapper.updateSessionByAdmin(admin);
+        return result;
+    }
 }

@@ -29,4 +29,6 @@ public interface AdminMapper {
     int updateByPrimaryKeySelective(Admin record);
 
     int updateByPrimaryKey(Admin record);
+
+    int updateSessionByAdmin(Admin admin);
 }

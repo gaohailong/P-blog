@@ -203,8 +203,12 @@
   </update>
 
     <!--start 查询-->
-    <select id="selectBySession" parameterType="java.lang.String">
-
-    </select>
+    <update id="updateSessionByAdmin" parameterType="com.sxau.pblog.pojo.Admin">
+        update admin
+        set sessionid=
+        #{sessionid,jdbcType=CHAR}
+        where adminname=#{adminname,jdbcType=CHAR}
+        and adminpass=#{adminpass,jdbcType=CHAR};
+    </update>
     <!--end 查询-->
 </mapper>

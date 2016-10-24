@@ -17,4 +17,8 @@ public class TestLogin extends SpringTestCase{
     public void getAdminNum(){
         System.out.print(loginService.vertifyUser("gao","ao"));
     }
+    @Test
+    public void addSessionByAdmin(){
+        System.out.print(loginService.updateSessionByAdmin("qwertqqyqq","gao","gao"));
+    }
 }
