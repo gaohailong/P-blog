@@ -1,6 +1,11 @@
 package com.sxau.pblog.pojo;
 
-public class Category {
+import java.io.Serializable;
+
+/**
+ * 分类
+ */
+public class Category implements Serializable{
     private Integer id;
 
     private String category;

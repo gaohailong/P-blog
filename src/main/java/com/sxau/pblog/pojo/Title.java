@@ -3,6 +3,9 @@ package com.sxau.pblog.pojo;
 import java.io.Serializable;
 import java.util.Date;
 
+/**
+ * 文章
+ */
 public class Title implements Serializable{
     private Integer id;
 

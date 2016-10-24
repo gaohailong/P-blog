@@ -9,16 +9,19 @@ import javax.annotation.Resource;
 /**
  * Created by gaohailong on 2016/10/22.
  */
-public class TestLogin extends SpringTestCase{
+public class TestLogin extends SpringTestCase {
     @Resource
     private LoginService loginService;
 
     @Test
-    public void getAdminNum(){
-        System.out.print(loginService.vertifyUser("gao","ao"));
+    public void getAdminNum() {
+        System.out.print(loginService.vertifyUser("gao", "ao"));
     }
+
     @Test
-    public void addSessionByAdmin(){
-        System.out.print(loginService.updateSessionByAdmin("qwertqqyqq","gao","gao"));
+    public void addSessionByAdmin() {
+        System.out.print(loginService.updateSessionByAdmin("qwertqqyqq", "gao", "gao"));
     }
+
+
 }

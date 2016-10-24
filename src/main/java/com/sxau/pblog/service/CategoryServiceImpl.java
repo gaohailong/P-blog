@@ -63,7 +63,7 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public int  updateCategoryById(Category category) {
+    public int updateCategoryById(Category category) {
         int num = categoryMapper.updateByPrimaryKey(category);
         return num;
     }

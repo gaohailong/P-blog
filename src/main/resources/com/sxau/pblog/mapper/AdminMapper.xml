@@ -210,5 +210,8 @@
         where adminname=#{adminname,jdbcType=CHAR}
         and adminpass=#{adminpass,jdbcType=CHAR};
     </update>
+    <select id="selectSessionIdBySessionId" resultType="java.lang.Integer" parameterType="java.lang.String">
+        select count(*) from admin where sessionid=#{sessionid,jdbcType=CHAR}
+    </select>
     <!--end 查询-->
 </mapper>

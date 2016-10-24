@@ -9,6 +9,8 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 
 /**
  * Created by gaohailong on 2016/9/25.
@@ -33,9 +35,13 @@ public class TitleController extends BaseController {
      * @return
      */
     @ResponseBody
+    @ApiOperation(value = "分页查询", httpMethod = "GET", response = Title.class, notes = "分页获取对象", produces = MediaType.APPLICATION_JSON_VALUE)
+    @ApiResponses(value = {@ApiResponse(code = 200, message = "文章")})
     @RequestMapping(value = "/findTitle", method = RequestMethod.GET)
-    @ApiOperation(value = "分页查询", httpMethod = "GET", response = ApiResponse.class, notes = "分页获取对象")
-    public PagedResult<Title> queryByPage(@ApiParam(required = true, name = "page", value = "页数") @RequestParam(value = "page") int page, @ApiParam(required = true, name = "pageNumber", value = "条数") @RequestParam(value = "pageNumber") int pageNumber) {
+    public PagedResult<Title> queryByPage(@ApiParam(required = true, name = "page", value = "页数")
+                                          @RequestParam(value = "page") int page,
+                                          @ApiParam(required = true, name = "pageNumber", value = "条数")
+                                          @RequestParam(value = "pageNumber") int pageNumber) {
         PagedResult<Title> pagedResult = titleService.queryByPage(null, page, pageNumber);//null表示查全部
         return pagedResult;
     }
@@ -49,8 +55,17 @@ public class TitleController extends BaseController {
      * @param titleDisplay
      */
     @ResponseBody
+    @ApiOperation(value = "添加文章", httpMethod = "POST", response = String.class, notes = "添加文章", produces = MediaType.APPLICATION_JSON_VALUE)
+    @ApiResponses(value = {@ApiResponse(code = 200, message = "添加成功！")})
     @RequestMapping(value = "/addTitle", method = RequestMethod.POST)
-    public String addTitle(@RequestParam(value = "titleName", required = true) String titleName, @RequestParam(value = "titleContent", required = true) String titleContent, @RequestParam(value = "titleCate") String titleCate, @RequestParam(value = "titleDisplay") String titleDisplay) throws Exception {
+    public String addTitle(@ApiParam(required = true, name = "titleName", value = "文章名称")
+                           @RequestParam(value = "titleName", required = true) String titleName,
+                           @ApiParam(required = true, value = "文章内容", name = "titleContent")
+                           @RequestParam(value = "titleContent", required = true) String titleContent,
+                           @ApiParam(required = true, name = "titleCate", value = "文章分类")
+                           @RequestParam(value = "titleCate") String titleCate,
+                           @ApiParam(value = "是否展示", required = true, name = "titleDisplay")
+                           @RequestParam(value = "titleDisplay") String titleDisplay) throws Exception {
         int num = titleService.addTitle(titleName, titleContent, titleCate, titleDisplay);
         if (num != 0) {
             return responseStringToJson("添加成功！");
@@ -66,8 +81,11 @@ public class TitleController extends BaseController {
      * @throws Exception
      */
     @ResponseBody
+    @ApiOperation(value = "删除文章", httpMethod = "GET", response = String.class, notes = "通过id删除文章", produces = MediaType.APPLICATION_JSON_VALUE)
+    @ApiResponses(value = {@ApiResponse(code = 200, message = "删除成功！")})
     @RequestMapping(value = "/deleteTitle", method = RequestMethod.GET)
-    public String deleteTitleById(@RequestParam(value = "id", required = true) int id) throws Exception {
+    public String deleteTitleById(@ApiParam(required = true, value = "文章id", name = "id")
+                                  @RequestParam(value = "id", required = true) int id) throws Exception {
         int num = titleService.deleteTitle(id);
         if (num != 0) {
             return responseStringToJson("删除成功！");
@@ -76,16 +94,28 @@ public class TitleController extends BaseController {
     }
 
     @ResponseBody
+    @ApiOperation(value = "查询文章", httpMethod = "GET", response = Title.class, notes = "通过id查询文章", produces = MediaType.APPLICATION_JSON_VALUE)
+    @ApiResponses(value = {@ApiResponse(code = 200, message = "查询成功")})
     @RequestMapping(value = "/selectById", method = RequestMethod.GET)
-    public Title selectTitleById(@RequestParam(value = "id", required = true) int id) throws Exception {
+    public Title selectTitleById(@ApiParam(required = true, name = "id", value = "文章id")
+                                 @RequestParam(value = "id", required = true) int id) throws Exception {
         return titleService.selectById(id);
     }
 
     @ResponseBody
+    @ApiOperation(value = "修改文章", httpMethod = "POST", response = String.class, notes = "通过id修改文章", produces = MediaType.APPLICATION_JSON_VALUE)
+    @ApiResponses(value = {@ApiResponse(code = 200, message = "修改成功")})
     @RequestMapping(value = "/updateById", method = RequestMethod.POST)
-    public String updateTitleById(@RequestParam(value = "id", required = true) int id, @RequestParam(value = "head", required = true) String head,
-                                  @RequestParam(value = "content", required = true) String content, @RequestParam(value = "titleCate", required = true)
-                                          String titleCate, @RequestParam(value = "titleDisplay", required = true) String titleDisplay) throws Exception {
+    public String updateTitleById(@ApiParam(required = true, value = "文章id", name = "id")
+                                  @RequestParam(value = "id", required = true) int id,
+                                  @ApiParam(required = true, value = "文章的标题", name = "head")
+                                  @RequestParam(value = "head", required = true) String head,
+                                  @ApiParam(required = true, value = "文章内容", name = "content")
+                                  @RequestParam(value = "content", required = true) String content,
+                                  @ApiParam(required = true, value = "文章分类", name = "titleCate")
+                                  @RequestParam(value = "titleCate", required = true) String titleCate,
+                                  @ApiParam(required = true, value = "是否展示", name = "titleDisplay")
+                                  @RequestParam(value = "titleDisplay", required = true) String titleDisplay) throws Exception {
         int num = titleService.updateTitleById(id, head, content, titleCate, titleDisplay);
         if (num != 0) {
             return responseStringToJson("修改成功！");
@@ -98,54 +128,10 @@ public class TitleController extends BaseController {
      */
 
     /**
-     *app部分
+     * 微信部分
      */
 
-    /*@ApiOperation(value = "获得商品信息", notes = "获取商品信息(用于数据同步)", httpMethod = "GET", produces = MediaType.APPLICATION_JSON_VALUE)
-    @ApiResponses(value = {@ApiResponse(code = 200, message = "商品信息"),
-            @ApiResponse(code = 201, message = "(token验证失败)", response = String.class),
-            @ApiResponse(code = 202, message = "(系统错误)", response = String.class)})
-    @RequestMapping(value = "/findUser", method = RequestMethod.GET)
-    @ResponseBody
-    public List<Title> testJson() {
-        List<Title> titles = titleService.findAllTitle();
-        return titles;
-    }*/
-/*
-    @ApiOperation(value = "获得文章信息", notes = "获取文章信息", httpMethod = "GET", produces = MediaType.APPLICATION_JSON_VALUE)
-    @ApiResponses(value = {@ApiResponse(code = 200, message = "文章信息"),
-            @ApiResponse(code = 201, message = "(token验证失败)", response = String.class),
-            @ApiResponse(code = 202, message = "(系统错误)", response = String.class)})
-    @RequestMapping(value = "/findTitle/page={page}/pageNumber={pageNumber}", method = RequestMethod.GET)
-    @ResponseBody
-    public PagedResult<Title> queryByPage(@ApiParam(required = true, name = "page", value = "页数") @PathVariable int page,
-                                          @ApiParam(required = true, name = "pageNumber", value = "条数") @PathVariable int pageNumber) {
-        PagedResult<Title> pagedResult = titleService.queryByPage(null, page, pageNumber);//null表示查全部
-        return pagedResult;
-    }*/
-
-    /*@RequestMapping(value = "/findAll", method = RequestMethod.GET)
-    @ResponseBody
-    public String testPage() {
-        return "addTitle";
-    }*/
-       /*   @RequestMapping(value = "/findUser")
-       @ResponseBody
-       public List<Title> testJson() {
-           List<Title> titles = userService.findAllTitle();
-           return titles;
-       }*/
-
-  /*  @RequestMapping("/findUser")
-    public ModelAndView findTitle() throws E
-    xception {
-        ModelAndView modelAndView = new ModelAndView();
-        //调用service方法得到用户列表
-        List<Title> titles = userService.findAllTitle();
-        //将得到的用户列表内容添加到ModelAndView中
-        modelAndView.addObject("titles", titles);
-        //设置响应的jsp视图
-        modelAndView.setViewName("findTitle");
-        return modelAndView;
-    }*/
+    /**
+     *app部分
+     */
 }
