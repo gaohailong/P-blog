@@ -1,10 +1,14 @@
 /**
  * Created by gaohailong on 2016/9/27.
  */
-
+/*window.onload = function () {
+    alert("ddd");
+    $("#p_default").css("display", "block");
+}*/
 //获取文章的操作
 function allTitle() {
     hideDiv();
+    hidePChart();
     getTitleNet();
     $("#d_title").css("display", "block");
 }
@@ -15,7 +19,7 @@ function selectOpForUpdateAndAdd() {
     if (name == 0) {
         addTitleAft();
     } else if (name == 1) {
-        //TODO 修改文章的后期操作
+        // 修改文章的后期操作
         updateTitleById();
     }
 }
@@ -23,6 +27,7 @@ function selectOpForUpdateAndAdd() {
 //添加文章前期的操作
 function addTitlePre() {
     hideDiv();
+    hidePChart();
     getCategory();
     hideAddTitleContent();
     $("#b_t_sub").attr("value", "0");
@@ -108,6 +113,7 @@ function updateTitleById() {
 //获取所有分类操作
 function allCategory() {
     hideDiv();
+    hidePChart();
     getCategoryForCate();
     $("#d_category").css("display", "block");
 }
@@ -115,6 +121,7 @@ function allCategory() {
 //添加分类操作
 function addCategory() {
     hideDiv();
+    hidePChart();
     $("#i_category").css("display", "block");
 }
 
@@ -126,6 +133,12 @@ function hideDiv() {
     $("#i_category").css("display", "none");
     $("#u_title").css("display", "none");
     $("#u_c_category").css("display", "none");
+    // $("#p_default").css("display", "none");
+}
+
+//隐藏个人管理图表
+function hidePChart() {
+    $("#p_default").css("display", "none");
 }
 
 //获取所有文章的网络操作
@@ -220,6 +233,7 @@ function updateTitleByIdOfSelect(id) {
 //修改改变UI
 function changeUIForTitle(id, head, content, cate, display) {
     hideDiv();
+    hidePChart();
     $("#b_update").val(id);
     $("#b_t_sub").attr("value", "1");
     $("#inputEmail3").val(head);

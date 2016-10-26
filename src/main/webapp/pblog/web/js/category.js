@@ -65,6 +65,7 @@ function selectCateById(id) {
 
 function changeUIForCate(id, cate) {
     hideDiv();
+    hidePChart();
     $("#u_c_id").val(id);
     $("#u_c_head").val(cate);
     $("#u_c_category").css("display", "block");

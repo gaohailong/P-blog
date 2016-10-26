@@ -43,6 +43,8 @@
     <!--图表引入-->
     <script language="javascript" src="<%=request.getContextPath()%>/pblog/web/js/echarts.js"></script>
     <script language="javascript" src="<%=request.getContextPath()%>/pblog/web/js/chart.js"></script>
+
+    <script language="javascript" src="<%=request.getContextPath()%>/pblog/web/js/personalmanager.js"></script>
 </head>
 <body>
 <div>${sessionScope.SESSION_ID }</div>
@@ -122,7 +124,7 @@
                     <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
                          aria-labelledby="headingThree">
                         <ul class="list-group">
-                            <li class="list-group-item" style="padding-left: 30px;"><a href="#">Bootply</a></li>
+                            <li class="list-group-item" style="padding-left: 30px;"><a href="#" onclick="javascript:displayPChart()">图表统计</a></li>
                             <li class="list-group-item" style="padding-left: 30px;"><a href="#">Bootply</a></li>
                             <li class="list-group-item" style="padding-left: 30px;"><a href="#">Bootply</a></li>
                         </ul>
@@ -170,14 +172,14 @@
         </div>
         <div class="col-lg-8 "
              style="background-color: #ffffff;border-radius: 10px; border: #d4d4d4 1px solid;margin: 20px;">
-            <!--TODO start 默认显示页面-->
+            <!-- start 默认显示页面-->
             <div id="p_default" class="col-lg-12">
-                <div id="article_graph"  class="col-lg-6" style="height: 500px">
+                <div id="article_graph" class="col-lg-6" style="height: 500px;margin-top: 20px;margin-bottom: 10px;">
                     <script type="text/javascript">
                         articleGraph();
                     </script>
                 </div>
-                <div id="category_graph"  class="col-lg-6" style="height: 500px">
+                <div id="category_graph" class="col-lg-6" style="height: 500px;margin-top: 20px;margin-bottom: 10px;" >
                     <script type="text/javascript">
                         categoryGraph();
                     </script>

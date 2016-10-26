@@ -1,8 +1,6 @@
 /**
  * Created by gaohailong on 2016/9/27.
  */
-
-
 function login() {
     /* var username = $.md5($("#username").val());
      var password = $.md5($("#password").val());*/

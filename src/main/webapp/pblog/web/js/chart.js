@@ -41,7 +41,7 @@ function setTitleStatistics(data) {
             type: 'value'
         },
         series: [{
-            name: '成交',
+            name: '文章数',
             type: 'line',
             smooth: true,
             itemStyle: {
@@ -87,20 +87,20 @@ function categoryGraph() {
 function setCateStatistics(data) {
     var dataNum = new Array();
     var indicator2 = new Array();
-    var max = 3;
-    var i=0
+    var max = 0;
+    //判断最大值
+    for (var i = 0; i < eval(data).length; i++) {
+        if (data[i].cateTitleCount > 0) {
+            max = data[i].cateTitleCount * 3;
+        }
+    }
     for (var i = 0; i < eval(data).length; i++) {
         dataNum[i] = data[i].cateTitleCount;
         indicator2[i] = new Cate(data[i].cateName, max * 2);
     }
-    var txt = JSON.stringify(indicator2);
-    // var arrayData = JSON.stringify(dataNum);
-    var dataCate=[
+    var dataCate = [
         dataNum
     ];
-    // alert(dataCate);
-    // alert(txt);
-    // alert(arrayData);
     var category_graph = echarts.init(document.getElementById("category_graph"));
     var lineStyle = {
         normal: {
@@ -108,19 +108,17 @@ function setCateStatistics(data) {
             opacity: 0.5
         }
     };
-
-    //TODO 数据不对应
-   var option = {
+    var option = {
         backgroundColor: '#161627',
         title: {
-            text: 'AQI - 雷达图',
+            text: '文章类型 - 雷达图',
             left: 'center',
             textStyle: {
                 color: '#eee'
             }
         },
         radar: {
-            indicator:indicator2,
+            indicator: indicator2,
             shape: 'circle',
             splitNumber: 5,
             name: {
