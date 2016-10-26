@@ -19,4 +19,5 @@ public class TestTitle extends SpringTestCase {
         PagedResult<Title> pagedResult = tittleService.queryByPage(null, 1, 2);//null表示查全部
         System.out.print(pagedResult);
     }
+
 }

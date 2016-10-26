@@ -39,6 +39,10 @@
     <script language="javascript" src="<%=request.getContextPath()%>/Ueditor/ueditor.all.js"></script>
     <!-- 语言包文件(建议手动加载语言包，避免在ie下，因为加载语言失败导致编辑器加载失败) -->
     <script language="javascript" src="<%=request.getContextPath()%>/Ueditor/lang/zh-cn/zh-cn.js"></script>
+
+    <!--图表引入-->
+    <script language="javascript" src="<%=request.getContextPath()%>/pblog/web/js/echarts.js"></script>
+    <script language="javascript" src="<%=request.getContextPath()%>/pblog/web/js/chart.js"></script>
 </head>
 <body>
 <div>${sessionScope.SESSION_ID }</div>
@@ -167,7 +171,14 @@
         <div class="col-lg-8 "
              style="background-color: #ffffff;border-radius: 10px; border: #d4d4d4 1px solid;margin: 20px;">
             <!--TODO start 默认显示页面-->
-            <%--<div id="p_default"></div>--%>
+            <div id="p_default" class="col-lg-12">
+                <div id="article_graph"  class="col-lg-6" style="height: 500px">
+                    <script type="text/javascript">
+                        articleGraph();
+                    </script>
+                </div>
+                <%--<div id="category_graph"  class="col-lg-6"></div>--%>
+            </div>
             <!--end 默认显示页面-->
             <!--start 所有文章-->
             <div id="d_title" class="col-lg-12">

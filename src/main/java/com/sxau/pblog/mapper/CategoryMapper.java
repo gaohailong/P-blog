@@ -1,5 +1,6 @@
 package com.sxau.pblog.mapper;
 
+import com.sxau.pblog.pojo.AdminTotal;
 import com.sxau.pblog.pojo.Category;
 import com.sxau.pblog.pojo.CategoryExample;
 
@@ -76,4 +77,5 @@ public interface CategoryMapper {
      * @return
      */
     int updateByPrimaryKey(Category record);
+
 }

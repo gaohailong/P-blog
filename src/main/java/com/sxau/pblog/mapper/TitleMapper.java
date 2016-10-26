@@ -1,8 +1,11 @@
 package com.sxau.pblog.mapper;
 
+import com.sxau.pblog.pojo.AdminTotal;
 import com.sxau.pblog.pojo.Title;
 import com.sxau.pblog.pojo.TitleExample;
+
 import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
 
 public interface TitleMapper {
@@ -36,4 +39,16 @@ public interface TitleMapper {
     int updateByPrimaryKeyWithBLOBs(Title record);
 
     int updateByPrimaryKey(Title record);
+
+    /**
+     * 查询每个月发表的文章总数
+     *
+     * @return
+     */
+    List<AdminTotal> selectAdminTitleTotal();
+
+    /**
+     * 查询每个分类下的文章总数
+     */
+    List<AdminTotal> selectTitleCountOfCate();
 }
