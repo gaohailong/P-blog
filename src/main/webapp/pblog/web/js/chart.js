@@ -1,6 +1,7 @@
 /**
  * Created by Administrator on 2016/10/25.
  */
+//每个月发表的文章总数(网络)
 function articleGraph() {
     $.ajax({
         type: "GET",
@@ -65,4 +66,109 @@ function setTitleStatistics(data) {
         }]
     };
     article_graph.setOption(option);
+}
+
+//文章对应的分类（网络）
+function categoryGraph() {
+    $.ajax({
+        type: "GET",
+        url: "/admin/selectTitleCountOfCate",
+        dataType: "JSON",
+        success: function (data) {
+            setCateStatistics(data);
+        },
+        error: function (jqXHR) {
+            alert("发生错误！" + jqXHR);
+        }
+    });
+}
+
+//文章对应的分类
+function setCateStatistics(data) {
+    var dataNum = new Array();
+    var indicator2 = new Array();
+    var max = 3;
+    var i=0
+    for (var i = 0; i < eval(data).length; i++) {
+        dataNum[i] = data[i].cateTitleCount;
+        indicator2[i] = new Cate(data[i].cateName, max * 2);
+    }
+    var txt = JSON.stringify(indicator2);
+    // var arrayData = JSON.stringify(dataNum);
+    var dataCate=[
+        dataNum
+    ];
+    // alert(dataCate);
+    // alert(txt);
+    // alert(arrayData);
+    var category_graph = echarts.init(document.getElementById("category_graph"));
+    var lineStyle = {
+        normal: {
+            width: 1,
+            opacity: 0.5
+        }
+    };
+
+    //TODO 数据不对应
+   var option = {
+        backgroundColor: '#161627',
+        title: {
+            text: 'AQI - 雷达图',
+            left: 'center',
+            textStyle: {
+                color: '#eee'
+            }
+        },
+        radar: {
+            indicator:indicator2,
+            shape: 'circle',
+            splitNumber: 5,
+            name: {
+                textStyle: {
+                    color: 'rgb(238, 197, 102)'
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: [
+                        'rgba(238, 197, 102, 0.1)', 'rgba(238, 197, 102, 0.2)',
+                        'rgba(238, 197, 102, 0.4)', 'rgba(238, 197, 102, 0.6)',
+                        'rgba(238, 197, 102, 0.8)', 'rgba(238, 197, 102, 1)'
+                    ].reverse()
+                }
+            },
+            splitArea: {
+                show: false
+            },
+            axisLine: {
+                lineStyle: {
+                    color: 'rgba(238, 197, 102, 0.5)'
+                }
+            }
+        },
+        series: [
+            {
+                type: 'radar',
+                lineStyle: lineStyle,
+                data: dataCate,
+                symbol: 'none',
+                itemStyle: {
+                    normal: {
+                        color: '#F9713C'
+                    }
+                },
+                areaStyle: {
+                    normal: {
+                        opacity: 0.1
+                    }
+                }
+            }
+        ]
+    };
+    category_graph.setOption(option);
+}
+
+function Cate(name, max) {
+    this.name = name;
+    this.max = max;
 }

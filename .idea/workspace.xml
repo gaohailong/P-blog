@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="982b3f9e-34b0-469a-971c-287a933c9c3a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sxau/pblog/controller/AdminTotalController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sxau/pblog/pojo/AdminTotal.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sxau/pblog/service/AdminTotalServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sxau/pblog/service/IService/AdminTotalService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pblog/web/js/chart.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pblog/web/js/echarts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pblog/web/js/echarts.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/com/sxau/pblog/dao/TestCategory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/com/sxau/pblog/dao/TestTitle.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pblog/web/js/json2.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sxau/pblog/mapper/CategoryMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/sxau/pblog/mapper/CategoryMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sxau/pblog/mapper/TitleMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/sxau/pblog/mapper/TitleMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/sxau/pblog/mapper/TitleMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/sxau/pblog/mapper/TitleMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sxau/pblog/service/AdminTotalServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/sxau/pblog/service/AdminTotalServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manager.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manager.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/com/sxau/pblog/service/TestTitle.java" afterPath="$PROJECT_DIR$/src/test/com/sxau/pblog/service/TestTitle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pblog/web/js/chart.js" afterPath="$PROJECT_DIR$/src/main/webapp/pblog/web/js/chart.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pblog/web/js/echarts.js" afterPath="$PROJECT_DIR$/src/main/webapp/pblog/web/js/echarts.js" />
     </list>
     <ignored path="P-blog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,27 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AdminTotalController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sxau/pblog/controller/AdminTotalController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="27" column="52" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="52" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#880#881#0" expanded="true" />
-                <element signature="e#944#945#0" expanded="true" />
-                <element signature="e#1102#1103#0" expanded="true" />
-                <element signature="e#1167#1168#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="manager.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manager.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="176" column="39" selection-start-line="176" selection-start-column="39" selection-end-line="176" selection-end-column="39" />
+            <state relative-caret-position="136">
+              <caret line="181" column="37" selection-start-line="181" selection-start-column="24" selection-end-line="181" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -68,10 +43,12 @@
       <file leaf-file-name="chart.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/pblog/web/js/chart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+            <state relative-caret-position="215">
+              <caret line="102" column="18" selection-start-line="102" selection-start-column="18" selection-end-line="102" selection-end-column="18" />
               <folding>
                 <element signature="n#!!doc;n#articleGraph#0" expanded="false" />
+                <element signature="n#!!block;n#articleGraph#0" expanded="false" />
+                <element signature="n#!!block;n#categoryGraph#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -80,98 +57,12 @@
       <file leaf-file-name="title.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/pblog/web/js/title.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="276" column="18" selection-start-line="276" selection-start-column="9" selection-end-line="276" selection-end-column="18" />
+            <state relative-caret-position="-128">
+              <caret line="270" column="0" selection-start-line="270" selection-start-column="0" selection-end-line="270" selection-end-column="0" />
               <folding>
                 <marker date="1477226250679" expanded="true" signature="4455:4480" placeholder="..." />
                 <marker date="1477226250679" expanded="true" signature="4624:4666" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdminTotalService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sxau/pblog/service/IService/AdminTotalService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestTitle.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/com/sxau/pblog/dao/TestTitle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TitleMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/com/sxau/pblog/mapper/TitleMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="142" column="38" selection-start-line="142" selection-start-column="16" selection-end-line="142" selection-end-column="38" />
-              <folding>
-                <element signature="n#sql#0;n#mapper#0;n#!!top" expanded="false" />
-                <element signature="n#sql#1;n#mapper#0;n#!!top" expanded="false" />
-                <element signature="n#sql#2;n#mapper#0;n#!!top" expanded="false" />
-                <element signature="n#sql#3;n#mapper#0;n#!!top" expanded="false" />
-                <element signature="n#select#0;n#mapper#0;n#!!top" expanded="false" />
-                <marker date="1477452837905" expanded="true" signature="4993:5191" placeholder="SELECT * FRO... title" />
-                <marker date="1477452837905" expanded="true" signature="5795:5960" placeholder="select , fro... " />
-                <marker date="1477452837905" expanded="true" signature="6148:6262" placeholder="select count... title" />
-                <marker date="1477452837905" expanded="true" signature="6270:6373" placeholder="select count... title" />
-                <marker date="1477452837905" expanded="true" signature="6513:6598" placeholder="select COUNT... title" />
-                <marker date="1477452837905" expanded="true" signature="6741:6796" placeholder="delete from " />
-                <marker date="1477452837905" expanded="true" signature="6900:6917" placeholder="delete from " />
-                <marker date="1477452837905" expanded="true" signature="7108:7516" placeholder="insert into title... " />
-                <marker date="1477452837905" expanded="true" signature="9594:9620" placeholder="select count... title" />
-                <marker date="1477452837905" expanded="true" signature="11194:11690" placeholder="update title... " />
-                <marker date="1477452837905" expanded="true" signature="11882:12306" placeholder="update title... " />
-                <marker date="1477452837905" expanded="true" signature="12532:13532" placeholder="update title... " />
-                <marker date="1477452837905" expanded="true" signature="13639:14055" placeholder="update title... " />
-                <marker date="1477452837905" expanded="true" signature="14151:14504" placeholder="update title... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdminTotalServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sxau/pblog/service/AdminTotalServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="25" column="50" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="50" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestCategory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/com/sxau/pblog/dao/TestCategory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TitleMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sxau/pblog/mapper/TitleMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="52" column="43" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="43" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -223,11 +114,11 @@
         <option value="$PROJECT_DIR$/src/main/resources/com/sxau/pblog/mapper/TitleMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/sxau/pblog/mapper/CategoryMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sxau/pblog/mapper/TitleMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sxau/pblog/service/AdminTotalServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/test/com/sxau/pblog/dao/TestCategory.java" />
         <option value="$PROJECT_DIR$/src/test/com/sxau/pblog/dao/TestTitle.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sxau/pblog/controller/AdminTotalController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manager.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sxau/pblog/service/AdminTotalServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/pblog/web/js/chart.js" />
       </list>
     </option>
@@ -1431,7 +1322,7 @@
       <workItem from="1477271174237" duration="21925000" />
       <workItem from="1477307431425" duration="2567000" />
       <workItem from="1477354772722" duration="16436000" />
-      <workItem from="1477441426969" duration="13548000" />
+      <workItem from="1477441426969" duration="34161000" />
     </task>
     <servers />
   </component>
@@ -1468,11 +1359,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59223000" />
+    <option name="totallyTimeSpent" value="79836000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1491,9 +1382,9 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3252688" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32258064" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19215938" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -1528,51 +1419,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/sxau/pblog/mapper/AdminMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#sql#0;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#sql#1;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#select#0;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="e#4224#4654#0" expanded="false" />
-            <element signature="n#select#1;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#delete#0;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#delete#1;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#insert#0;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#insert#1;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#select#2;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#update#0;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#update#1;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#update#2;n#mapper#0;n#!!top" expanded="false" />
-            <element signature="n#update#4;n#mapper#0;n#!!top" expanded="false" />
-            <marker date="1477278739492" expanded="true" signature="4761:4872" placeholder="select from admin" />
-            <marker date="1477278739492" expanded="true" signature="4962:5017" placeholder="delete from " />
-            <marker date="1477278739492" expanded="true" signature="5121:5138" placeholder="delete from " />
-            <marker date="1477278739492" expanded="false" signature="5329:5479" placeholder="insert into admin... " />
-            <marker date="1477278739492" expanded="true" signature="7363:7532" placeholder="update admin... " />
-            <marker date="1477278739492" expanded="true" signature="7758:8073" placeholder="update admin... " />
-            <marker date="1477278739492" expanded="true" signature="8171:8314" placeholder="update admin... " />
-            <marker date="1477278739492" expanded="true" signature="8437:8607" placeholder="update admin... " />
-            <marker date="1477278739492" expanded="true" signature="8740:8755" placeholder="select count... " />
-            <marker date="1477278739492" expanded="true" signature="8740:8760" placeholder="select count... " />
-            <marker date="1477278739492" expanded="true" signature="8740:8772" placeholder="select count... admin" />
-            <marker date="1477278739492" expanded="true" signature="8740:8773" placeholder="select count... admin" />
-            <marker date="1477278739492" expanded="true" signature="8740:8783" placeholder="select count... admin" />
-            <marker date="1477278739492" expanded="true" signature="8740:8784" placeholder="select count... admin" />
-            <marker date="1477278739492" expanded="true" signature="8740:8809" placeholder="select count... admin" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sxau/pblog/pojo/AdminExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="213" column="35" selection-start-line="213" selection-start-column="35" selection-end-line="213" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -1710,13 +1556,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sxau/pblog/controller/BaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-145">
@@ -1748,22 +1587,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pblog/web/js/echarts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sxau/pblog/service/CategoryServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="39" column="52" selection-start-line="39" selection-start-column="52" selection-end-line="39" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sxau/pblog/mapper/AdminMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
@@ -1776,6 +1599,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1937,17 +1761,7 @@
         <state relative-caret-position="286">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sxau/pblog/service/AdminTotalServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="25" column="50" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1984,9 +1798,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1998,10 +1810,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/swagger/lib/jsoneditor.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="7" column="13399" selection-start-line="7" selection-start-column="13399" selection-end-line="7" selection-end-column="13399" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pblog/web/js/title.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-128">
+          <caret line="270" column="0" selection-start-line="270" selection-start-column="0" selection-end-line="270" selection-end-column="0" />
+          <folding>
+            <marker date="1477226250679" expanded="true" signature="4455:4480" placeholder="..." />
+            <marker date="1477226250679" expanded="true" signature="4624:4666" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sxau/pblog/service/AdminTotalServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pblog/web/js/json2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="370" column="24" selection-start-line="370" selection-start-column="24" selection-end-line="370" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sxau/pblog/controller/AdminTotalController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="27" column="52" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="52" />
+        <state relative-caret-position="240">
+          <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#880#881#0" expanded="true" />
@@ -2012,31 +1861,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manager.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sxau/pblog/service/CategoryServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="176" column="39" selection-start-line="176" selection-start-column="39" selection-end-line="176" selection-end-column="39" />
+        <state relative-caret-position="874">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pblog/web/js/title.js">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pblog/web/js/echarts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="276" column="18" selection-start-line="276" selection-start-column="9" selection-end-line="276" selection-end-column="18" />
-          <folding>
-            <marker date="1477226250679" expanded="true" signature="4455:4480" placeholder="..." />
-            <marker date="1477226250679" expanded="true" signature="4624:4666" placeholder="..." />
-          </folding>
+        <state relative-caret-position="345">
+          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sxau/pblog/controller/BaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="40" column="30" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manager.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="181" column="37" selection-start-line="181" selection-start-column="24" selection-end-line="181" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/pblog/web/js/chart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+        <state relative-caret-position="215">
+          <caret line="102" column="18" selection-start-line="102" selection-start-column="18" selection-end-line="102" selection-end-column="18" />
           <folding>
             <element signature="n#!!doc;n#articleGraph#0" expanded="false" />
+            <element signature="n#!!block;n#articleGraph#0" expanded="false" />
+            <element signature="n#!!block;n#categoryGraph#0" expanded="false" />
           </folding>
         </state>
       </provider>

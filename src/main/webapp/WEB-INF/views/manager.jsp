@@ -177,7 +177,11 @@
                         articleGraph();
                     </script>
                 </div>
-                <%--<div id="category_graph"  class="col-lg-6"></div>--%>
+                <div id="category_graph"  class="col-lg-6" style="height: 500px">
+                    <script type="text/javascript">
+                        categoryGraph();
+                    </script>
+                </div>
             </div>
             <!--end 默认显示页面-->
             <!--start 所有文章-->

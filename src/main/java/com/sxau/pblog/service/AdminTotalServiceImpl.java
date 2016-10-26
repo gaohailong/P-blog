@@ -25,6 +25,7 @@ public class AdminTotalServiceImpl implements AdminTotalService {
     @Override
     public List<AdminTotal> selectTitleCountOfCate() {
         List<AdminTotal> adminTotals = titleMapper.selectTitleCountOfCate();
+
         return adminTotals;
     }
 }
