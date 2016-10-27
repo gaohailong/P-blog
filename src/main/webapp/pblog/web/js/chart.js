@@ -1,6 +1,7 @@
 /**
  * Created by Administrator on 2016/10/25.
  */
+//====================个人信息统计部分========================
 //每个月发表的文章总数(网络)
 function articleGraph() {
     $.ajax({
@@ -83,7 +84,7 @@ function categoryGraph() {
     });
 }
 
-//文章对应的分类
+//文章对应的分类(个人)
 function setCateStatistics(data) {
     var dataNum = new Array();
     var indicator2 = new Array();
@@ -109,12 +110,12 @@ function setCateStatistics(data) {
         }
     };
     var option = {
-        backgroundColor: '#161627',
+        backgroundColor: '#FFFFFF',
         title: {
             text: '文章类型 - 雷达图',
             left: 'center',
             textStyle: {
-                color: '#eee'
+                color: '#0B0B0B'
             }
         },
         radar: {
@@ -123,15 +124,15 @@ function setCateStatistics(data) {
             splitNumber: 5,
             name: {
                 textStyle: {
-                    color: 'rgb(238, 197, 102)'
+                    color: 'rgb(11, 11, 11)'
                 }
             },
             splitLine: {
                 lineStyle: {
                     color: [
-                        'rgba(238, 197, 102, 0.1)', 'rgba(238, 197, 102, 0.2)',
-                        'rgba(238, 197, 102, 0.4)', 'rgba(238, 197, 102, 0.6)',
-                        'rgba(238, 197, 102, 0.8)', 'rgba(238, 197, 102, 1)'
+                        'rgba(11, 11, 11, 0.5)', 'rgba(11, 11, 11, 0.2)',
+                        'rgba(11, 11, 11, 0.3)', 'rgba(11, 11, 11, 0.3)',
+                        'rgba(11, 11, 11, 0.1)', 'rgba(11, 11, 11, 0.1)'
                     ].reverse()
                 }
             },
@@ -140,7 +141,7 @@ function setCateStatistics(data) {
             },
             axisLine: {
                 lineStyle: {
-                    color: 'rgba(238, 197, 102, 0.5)'
+                    color: 'rgba(11, 11, 11, 0.5)'
                 }
             }
         },
@@ -152,7 +153,7 @@ function setCateStatistics(data) {
                 symbol: 'none',
                 itemStyle: {
                     normal: {
-                        color: '#F9713C'
+                        color: '#0b0b0b'
                     }
                 },
                 areaStyle: {
@@ -165,8 +166,11 @@ function setCateStatistics(data) {
     };
     category_graph.setOption(option);
 }
-
+//图表实体类（个人）
 function Cate(name, max) {
     this.name = name;
     this.max = max;
 }
+
+//======================统计部分===========================
+
