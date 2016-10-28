@@ -41,7 +41,7 @@
 //            createCode();
             //测试提交，对接程序删除即可
             /* $(".submit_btn").click(function () {
-             location.href = "javascrpt:;"/!*tpa=http://!***index.html*!/;
+             location.href = "javascrpt:;"/!*tpa=http://!***blog.jsp*!/;
              });*/
         });
     </script>
