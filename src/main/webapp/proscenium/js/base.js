@@ -1,6 +1,7 @@
 /**
  * Created by gaohailong on 2016/10/28.
  */
+/*
 function getTitleNet(id) {
     //将视图清空
     $("#d_body").empty();
@@ -38,7 +39,7 @@ function getTitleNet(id) {
                 //文章数据项的添加((index+1)*pageNo)
                 $("#d_body").append(
                     "<tr><td>" + ((pageNo - 1) * pageSize + index + 1) + "</td><td>" + value.articlename + "</td><td>" + value.readnum + "</td><td>" +
-                    ormatDate(value.date) + "</td><td>" + value.isshow + "</td><td>"
+                    parseDateOne(value.date) + "</td><td>" + value.isshow + "</td><td>"
                     + value.category + "</td><td><a href='#' onclick='javascript:updateTitleByIdOfSelect(" + value.id + ")'><img src='pblog/web/images/update.png' style='width: 20px;height: 20px;'>" +
                     "</a><a href='#' onclick='javascript:deleteTitleById(" + value.id + ")'><img src='pblog/web/images/delete.png' style='width: 20px;height: 20px;margin-left: 5px;'></a></td></tr>"
                 );
@@ -48,4 +49,4 @@ function getTitleNet(id) {
             alert("发生错误" + jqXHR.status);
         }
     });
-}
+}*/

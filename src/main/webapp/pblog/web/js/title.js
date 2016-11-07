@@ -2,9 +2,9 @@
  * Created by gaohailong on 2016/9/27.
  */
 /*window.onload = function () {
-    alert("ddd");
-    $("#p_default").css("display", "block");
-}*/
+ alert("ddd");
+ $("#p_default").css("display", "block");
+ }*/
 //获取文章的操作
 function allTitle() {
     hideDiv();
@@ -179,7 +179,7 @@ function getTitleNet(id) {
                 //文章数据项的添加((index+1)*pageNo)
                 $("#d_body").append(
                     "<tr><td>" + ((pageNo - 1) * pageSize + index + 1) + "</td><td>" + value.articlename + "</td><td>" + value.readnum + "</td><td>" +
-                    ormatDate(value.date) + "</td><td>" + value.isshow + "</td><td>"
+                    parseDateOne(value.date) + "</td><td>" + value.isshow + "</td><td>"
                     + value.category + "</td><td><a href='#' onclick='javascript:updateTitleByIdOfSelect(" + value.id + ")'><img src='pblog/web/images/update.png' style='width: 20px;height: 20px;'>" +
                     "</a><a href='#' onclick='javascript:deleteTitleById(" + value.id + ")'><img src='pblog/web/images/delete.png' style='width: 20px;height: 20px;margin-left: 5px;'></a></td></tr>"
                 );
@@ -300,5 +300,20 @@ function ormatDate(dateNum) {
         }
         return s + str;
     }
+}
+
+function parseDateOne(date) {
+    var time = new Date(date);
+    var year = time.getFullYear();
+    var month = time.getMonth();
+    var day = time.getDay();
+    return year + "." + month+"."+day;
+}
+
+function parseDateTwo(date) {
+    var time = new Date(date);
+    var year = time.getFullYear();
+    var month = time.getMonth();
+    return year + "." + month;
 }
 

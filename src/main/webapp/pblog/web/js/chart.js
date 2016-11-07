@@ -22,7 +22,7 @@ function setTitleStatistics(data) {
     var adminTitleDate = new Array();
     for (var i = 0; i < eval(data).length; i++) {
         adminTitleCount[i] = data[i].adminTitleCount;
-        adminTitleDate[i] = data[i].adminTitleDate;
+        adminTitleDate[i] = parseDateTwo(data[i].adminTitleDate);
     }
     var article_graph = echarts.init(document.getElementById("article_graph"));
     var option = {
